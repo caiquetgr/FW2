@@ -16,7 +16,7 @@ img#logo{
 
 img#logo-alt{
 	max-width: 80%;
-	display: none;
+	
 }
 
 

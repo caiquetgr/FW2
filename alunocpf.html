@@ -17,8 +17,6 @@
 	//alert(largura);
 	
 		if(largura <= 480){
-		   document.getElementById('logo').src = "_imagens/logoabrev.png";
-		   document.getElementById('logo-alt').style.display = 'inline';
 			document.getElementById('titulo-conteudo').style.fontSize = 16 + 'px';
 			document.getElementById('txtfooter').style.fontSize = 13 + 'px';
 			document.getElementById('texto').style.paddingTop = 0.1 + '%';	
@@ -36,9 +34,8 @@
 
 <div id="jumbo" class="jumbotron">
 	<div class="container">  
- 	 	
+	
  	 	<img src="_imagens/logo.png" id="logo" alt="Sistema de Provas Online"/>
- 	 	<img src="_imagens/logo.png" id="logo-alt" alt="Sistema de Provas Online"/>
  	 	
    </div>
 </div>
@@ -53,18 +50,28 @@
 			<div class="rectangle">
 			
 					<div id="texto">
-					<h4 id="titulo-conteudo" style="text-align: center">Entre como aluno ou professor!</h4>
-					</div>
-										
-					<p class="p-imagem">
+					<h4 id="titulo-conteudo" style="text-align: center">Bem vindo aluno! <br/> Por favor, identifique-se com seu CPF:</h4>
 					
-					<a href="alunocpf.html"><img class="img-responsive" src="_imagens/aluno.png" id="aluno" alt="Aluno"/></a>
-					<a href="proflogin.html"> <img class="img-responsive" src="_imagens/professor.png" id="prof" alt="Professor"/></a>
-					 		
-					<div class="mdl-tooltip mdl-tooltip--right mdl-tooltip--large" for="prof">Professor</div>
-					<div class="mdl-tooltip mdl-tooltip--left mdl-tooltip--large" for="aluno">Aluno</div>
-										
-					</p>
+					<form action="#">
+ 					 <div class="mdl-textfield mdl-js-textfield">
+    					
+    					<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="cpf">
+    						
+    						<label class="mdl-textfield__label" for="cpf">Seu CPF...</label>
+    							
+    						<span class="mdl-textfield__error">Insira apenas números, sem pontuação!</span>
+    							
+  					
+  					 </div>
+  					 
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+  							Confirmar
+							</button> 	 					 
+  					 
+					</form>
+					
+					</div>
+					
 			</div>		
 		</div>
 		<div class="col-md-3"></div>
@@ -74,7 +81,7 @@
 </div>
 
 
-<footer class="footer"> <br/><p id="txtfooter">2016 - Por Caique Aquino Borges & Vivian Rebeca Brazão<p> </footer>
+<footer class="footer"> <br/><p id="txtfooter"> 2016 - Por Caique Aquino Borges & Vivian Rebeca Brazão </p> </footer>
 
 
 </body>
