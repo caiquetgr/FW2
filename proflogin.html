@@ -22,6 +22,8 @@
 			document.getElementById('titulo-conteudo').style.fontSize = 16 + 'px';
 			document.getElementById('txtfooter').style.fontSize = 13 + 'px';
 			document.getElementById('texto').style.paddingTop = 0.1 + '%';	
+			document.getElementById('login').style.marginTop = -5 + '%';
+			document.getElementById('titulo-conteudo').innerHTML = "Bem vindo professor!";
 		}  
 		
 	}
@@ -53,26 +55,28 @@
 			<div class="rectangle">
 			
 					<div id="texto">
-					<h4 id="titulo-conteudo" style="text-align: center">Bem vindo aluno! <br/> Por favor, identifique-se com seu CPF:</h4>
+					<h4 id="titulo-conteudo" style="text-align: center">Bem vindo professor! <br/> Entre com seu login e senha:</h4>
 					
 					<form action="#" method="post">
- 					 <div class="mdl-textfield mdl-js-textfield">
-    					
-    					<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="cpf">
-    						
-    					<label class="mdl-textfield__label" for="cpf">Seu CPF...</label>
-    							
-    					<span class="mdl-textfield__error">Insira apenas números, sem pontuação!</span>
-    							
-  					
-  					 </div>
+ 					 
+ 					  <div id="login" class="mdl-textfield mdl-js-textfield">
+    					<input class="mdl-textfield__input" type="text" id="user">
+    					<label class="mdl-textfield__label" for="user">Usuário</label>
+  					  </div>
+  					  
+						<br/>				  
+  					  
+  					  <div  class="mdl-textfield mdl-js-textfield">
+    					<input class="mdl-textfield__input" type="password" id="senha">
+    					<label class="mdl-textfield__label" for="senha">Senha</label>
+  					  </div>
   					 
   					 	<br/>
   					 	
   					 	
   					 	<input type="button" value="Voltar" onClick="window.location.href='index.html';" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="home">
   						
-						<input type="submit" value="Confirmar" button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="botao">
+						<input type="submit" value="Logar" button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="botao">
   							 					 
   					 	
 					</form>
