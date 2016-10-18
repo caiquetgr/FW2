@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <title>IFSP - SdPO</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="_css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="_css/index.css">
+  <link href = "https://fonts.googleapis.com/css?family= Roboto " rel = "stylesheet">
+  <link rel="stylesheet" href="_css/material.min.css">
+  <script src="_js/material.min.js"></script>
+  <script src="_js/bootstrap.min.js"></script>
+  
+  <script type="text/javascript">
+  window.onload = function mudaH4(){
+	var largura = window.innerWidth;
+	
+	//alert(largura);
+	
+		if(largura <= 480){
+		   document.getElementById('logo').src = "_imagens/logoabrev.png";
+		   document.getElementById('logo-alt').style.display = 'inline';
+			document.getElementById('titulo-conteudo').style.fontSize = 16 + 'px';
+			document.getElementById('txtfooter').style.fontSize = 13 + 'px';
+			document.getElementById('texto').style.paddingTop = 0.1 + '%';	
+		}  
+		
+	}
+  </script>
+  
+</head>
+
+<body>
+
+<style>
+		html {
+		  position: relative;
+		  min-height: 100%;
+		}
+
+		body{
+			background: #C5CAE9;
+			margin-bottom: 60px;
+		}
+		
+		header{
+		text-align: center;
+		background-color: #3F51B5;
+		padding: 1.3em;
+		color: #FFFFFF;
+		font-family: 'Roboto', sans-serif;
+		}
+		
+		.footer {
+		  margin-top: 2%;
+		  position: absolute;  
+		  display: block;
+		  width: 100%;
+		  height: 55px;
+		  background-color: #7986CB;
+		  text-align: center;
+		  text-indent: auto;
+		  
+		  
+		}
+
+		.footer p{
+			margin: auto;
+			color: #FFFFFF;
+			opacity: 70%;
+		}
+		
+		.rectangle { 
+		  width: 100%; 
+		  height: 0;
+		  padding-bottom: 55%; 
+		  background: #FFFFFF; 
+		  border-radius: 7px;
+		}
+
+		div#texto{
+			text-align: center;
+			display:block;
+			padding-top: 5%;
+			padding-bottom: -5%;
+			font-family: 'Roboto', sans-serif;
+		}
+
+		.col-md-6{
+			padding-top: 2%;
+			padding-bottom: 2%;
+			height: 100%;
+		}
+
+		.img-responsive {
+			width: 27%;
+			border-style: solid;
+			border-width: 2px;
+			border-radius: 6px;
+			display: inline;
+			
+		}
+
+		.img-responsive:hover{
+			border-color: rgb(109, 204, 255); 	
+		}
+
+		.p-imagem{
+			
+			text-align: center;
+			display: block;
+		}
+		
+		mdl-button{
+			color: #FF5252;
+		}
+		
+	</style>
+
+<div id="jumbo" class="jumbotron">
+
+	<div>
+			<h1 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Sistema de Provas Online</h1>
+	</div>
+</div>
+
+
+<div class="container-fluid">
+	
+	<div class="row" id="centro">
+	
+		<div class="col-md-3"></div>
+		<div class="col-md-6">
+			<div class="rectangle">
+			
+					<div id="texto">
+					<h4 id="titulo-conteudo" style="text-align: center">Escolha a funcionalidade que deseja utilizar:</h4>
+					
+					<form action="#">
+  					 
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+					Cadastrar Aluno
+					</button> 	 					 
+  					</br> 
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+					Cadastrar Prova
+					</button>
+					</br>
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+					Vizualizar resultados dos alunos
+					</button>
+					
+					</form>
+					
+					</div>
+					
+			</div>		
+		</div>
+		<div class="col-md-3"></div>
+		
+	</div>
+	
+</div>
+
+
+<footer class="footer"> <br/><p id="txtfooter">2016 - Por Caique Aquino Borges & Vivian Rebeca Brazão<p> </footer>
+
+
+</body>
+</html>
+	
+</body>
+
+</html>
