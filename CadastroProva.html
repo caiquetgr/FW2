@@ -23,6 +23,8 @@
 			document.getElementById('titulo-conteudo').style.fontSize = 16 + 'px';
 			document.getElementById('txtfooter').style.fontSize = 13 + 'px';
 			document.getElementById('texto').style.paddingTop = 0.1 + '%';	
+			document.getElementById('rec').style.paddingBottom = 80 + '%';
+					
 		}  
 		
 	}
@@ -32,96 +34,15 @@
 
 <body>
 
-<style>
-		html {
-		  position: relative;
-		  min-height: 100%;
-		}
 
-		body{
-			background: #C5CAE9;
-			margin-bottom: 60px;
-		}
-		
-		header{
-		text-align: center;
-		background-color: #3F51B5;
-		padding: 1.3em;
-		color: #FFFFFF;
-		font-family: 'Roboto', sans-serif;
-		}
-		
-		.footer {
-		  margin-top: 2%;
-		  position: absolute;  
-		  display: block;
-		  width: 100%;
-		  height: 55px;
-		  background-color: #7986CB;
-		  text-align: center;
-		  text-indent: auto;
-		  
-		  
-		}
-
-		.footer p{
-			margin: auto;
-			color: #FFFFFF;
-			opacity: 70%;
-		}
-		
-		.rectangle { 
-		  width: 100%; 
-		  height: 0;
-		  padding-bottom: 55%; 
-		  background: #FFFFFF; 
-		  border-radius: 7px;
-		}
-
-		div#texto{
-			text-align: center;
-			display:block;
-			padding-top: 5%;
-			padding-bottom: -5%;
-			font-family: 'Roboto', sans-serif;
-		}
-
-		.col-md-6{
-			padding-top: 2%;
-			padding-bottom: 2%;
-			height: 100%;
-		}
-
-		.img-responsive {
-			width: 27%;
-			border-style: solid;
-			border-width: 2px;
-			border-radius: 6px;
-			display: inline;
-			
-		}
-
-		.img-responsive:hover{
-			border-color: rgb(109, 204, 255); 	
-		}
-
-		.p-imagem{
-			
-			text-align: center;
-			display: block;
-		}
-		
-		mdl-button{
-			color: #FF5252;
-		}
-		
-	</style>
 
 <div id="jumbo" class="jumbotron">
-
-	<div>
-			<h1 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Sistema de Provas Online</h1>
-	</div>
+<div class="container">  
+	
+ 	 	<img src="_imagens/logo.png" id="logo" alt="Sistema de Provas Online"/>
+ 	 	<img src="_imagens/logo.png" id="logo-alt" alt="Sistema de Provas Online"/>
+ 	 	
+   </div>
 </div>
 
 
@@ -130,16 +51,16 @@
 	<div class="row" id="centro">
 	<div class="col-md-3"></div>
 		<div class="col-md-6">
-			<div class="rectangle">
+			<div class="rectangle" id="rec">
 			
 				<div id="texto">
 				<h4 id="titulo-conteudo" style="text-align: center">Cadastro de Prova</h4>
 										
 					<form action="#">
 					
-					<div>Quantas questões deseja cadastrar?<input class="mdl-textfield__input" type="text" id="qntPerg"></div></br>
-					<div>Título da prova: <input class="mdl-textfield__input" type="text" id="titulo"></div></br>
-					<div>Data de Início: <input class="mdl-textfield__input"type="datetime" id="inicio"></div></br>
+					<div>Quantas questões deseja cadastrar?<input class="mdl-textfield__input" type="text" id="qntPerg"></div>
+					<div>Título da prova: <input class="mdl-textfield__input" type="text" id="titulo"></div>
+					<div>Data de Início: <input class="mdl-textfield__input"type="datetime" id="inicio"></div>
 					<div>Data de Término: <input class="mdl-textfield__input" type="datetime" id="termino"></div>
 
 					</br>
@@ -158,12 +79,8 @@
 </div>
 
 
-<footer class="footer"> <br/><p id="txtfooter">2016 - Por Caique Aquino Borges & Vivian Rebeca Brazão<p> </footer>
+<footer id="foot" class="footer"> <br/><p id="txtfooter">2016 - Por Caique Aquino Borges & Vivian Rebeca Brazão<p> </footer>
 
 
 </body>
-</html>
-	
-</body>
-
 </html>
