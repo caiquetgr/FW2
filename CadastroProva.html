@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <title>IFSP - SdPO</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="_css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="_css/index.css">
+  <link href = "https://fonts.googleapis.com/css?family= Roboto " rel = "stylesheet">
   <link rel="stylesheet" href="_css/material.min.css">
   <script src="_js/material.min.js"></script>
   <script src="_js/bootstrap.min.js"></script>
@@ -17,6 +18,8 @@
 	//alert(largura);
 	
 		if(largura <= 480){
+		   document.getElementById('logo').src = "_imagens/logoabrev.png";
+		   document.getElementById('logo-alt').style.display = 'inline';
 			document.getElementById('titulo-conteudo').style.fontSize = 16 + 'px';
 			document.getElementById('txtfooter').style.fontSize = 13 + 'px';
 			document.getElementById('texto').style.paddingTop = 0.1 + '%';	
@@ -27,19 +30,10 @@
   
 </head>
 
-
-
 <body>
 
-
 <div id="jumbo" class="jumbotron">
-	<!--
-	<div class="container">  
- 	 	
- 	 	<img src="_imagens/logo.png" id="logo" alt="Sistema de Provas Online"/>
- 	 	
-   </div>
-   -->
+
 	<div>
 			<h1 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Sistema de Provas Online</h1>
 	</div>
@@ -49,45 +43,42 @@
 <div class="container-fluid">
 	
 	<div class="row" id="centro">
-	
-		<div class="col-md-3"></div>
+	<div class="col-md-3"></div>
 		<div class="col-md-6">
 			<div class="rectangle">
 			
-					<div id="texto">
-					<h4 id="titulo-conteudo" style="text-align: center">Bem vindo aluno! <br/> Por favor, identifique-se com seu CPF:</h4>
-					
+				<div id="texto">
+				<h4 id="titulo-conteudo" style="text-align: center">Cadastro de Prova</h4>
+										
 					<form action="#">
- 					 <div class="mdl-textfield mdl-js-textfield">
-    					
-    					<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="cpf">
-    						
-    						<label class="mdl-textfield__label" for="cpf">Seu CPF...</label>
-    							
-    						<span class="mdl-textfield__error">Insira apenas números, sem pontuação!</span>
-    							
-  					
-  					 </div>
-  					 
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
-  							Confirmar
-							</button> 	 					 
-  					 
-					</form>
 					
+					<div id="perguntasCadastroProva">Título da prova: <input class="mdl-textfield__input" type="text" id="titulo"></div></br>
+					<div id="perguntasCadastroProva">Quantas questões deseja cadastrar?<input class="mdl-textfield__input" type="text" id="qntPerg"></div></br>
+					<div id="perguntasCadastroProva">Data de Início: <input class="mdl-textfield__input"type="datetime" id="inicio"></div></br>
+					<div id="perguntasCadastroProva">Data de Término: <input class="mdl-textfield__input" type="datetime" id="termino"></div>
+
+					</br>
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+					Próxima
+					</button>
 					</div>
 					
+					</form>
+								
 			</div>		
+		</div>		
 		</div>
 		<div class="col-md-3"></div>
-		
-	</div>
 	
 </div>
 
 
-<footer class="footer"> <br/><p id="txtfooter"> 2016 - Por Caique Aquino Borges & Vivian Rebeca Brazão </p> </footer>
+<footer class="footer"> <br/><p id="txtfooter">2016 - Por Caique Aquino Borges & Vivian Rebeca Brazão<p> </footer>
 
 
 </body>
+</html>
+	
+</body>
+
 </html>
