@@ -19,7 +19,6 @@ img#logo-alt{
 	display: none;
 }
 
-
 .footer {
   margin-top: 3%;
   position: absolute;  
@@ -93,7 +92,6 @@ input#botao{
 	margin-right: 1%;
 	margin-left: 6%;
 }
-
 
 div#login{
 	display: inline-block;
