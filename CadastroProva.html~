@@ -22,8 +22,9 @@
 		   document.getElementById('logo-alt').style.display = 'inline';
 			document.getElementById('titulo-conteudo').style.fontSize = 16 + 'px';
 			document.getElementById('txtfooter').style.fontSize = 13 + 'px';
-			document.getElementById('texto').style.paddingTop = 0.1 + '%';
-			
+			document.getElementById('texto').style.paddingTop = 0.1 + '%';	
+			document.getElementById('rec').style.paddingBottom = 80 + '%';
+					
 		}  
 		
 	}
@@ -31,13 +32,12 @@
   
 </head>
 
-
-
 <body>
 
 
+
 <div id="jumbo" class="jumbotron">
-	<div class="container">  
+<div class="container">  
 	
  	 	<img src="_imagens/logo.png" id="logo" alt="Sistema de Provas Online"/>
  	 	<img src="_imagens/logo.png" id="logo-alt" alt="Sistema de Provas Online"/>
@@ -49,34 +49,37 @@
 <div class="container-fluid">
 	
 	<div class="row" id="centro">
-	
-		<div class="col-md-3"></div>
+	<div class="col-md-3"></div>
 		<div class="col-md-6">
-			<div class="rectangle">
+			<div class="rectangle" id="rec">
 			
-					<div id="texto">
-					<h4 id="titulo-conteudo" style="text-align: center">Entre como aluno ou professor!</h4>
-					</div>
+				<div id="texto">
+				<h4 id="titulo-conteudo" style="text-align: center">Cadastro de Prova</h4>
 										
-					<p class="p-imagem">
+					<form action="#">
 					
-					<a href="alunocpf.html"><img class="img-responsive" src="_imagens/aluno.png" id="aluno" alt="Aluno"/></a>
-					<a href="proflogin.html"> <img class="img-responsive" src="_imagens/professor.png" id="prof" alt="Professor"/></a>
-					 		
-					<div class="mdl-tooltip mdl-tooltip--right mdl-tooltip--large" for="prof">Professor</div>
-					<div class="mdl-tooltip mdl-tooltip--left mdl-tooltip--large" for="aluno">Aluno</div>
-										
-					</p>
+					<div>Quantas questões deseja cadastrar?<input  class="mdl-textfield__input" type="text" id="qntPerg"></div>
+					<div>Título da prova: <input id="cadastro" class="mdl-textfield__input" type="text" id="titulo"></div>
+					<div>Data de Início: <input id="cadastro" class="mdl-textfield__input"type="datetime" id="inicio"></div>
+					<div>Data de Término: <input id="cadastro" class="mdl-textfield__input" type="datetime" id="termino"></div>
+
+					</br>
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+					Próxima
+					</button>
+					</div>
+					
+					</form>
+								
 			</div>		
+		</div>		
 		</div>
 		<div class="col-md-3"></div>
-		
-	</div>
 	
 </div>
 
 
-<footer class="footer"> <br/><p id="txtfooter">2016 - Por Caique Aquino Borges & Vivian Rebeca Brazão<p> </footer>
+<footer id="foot" class="footer"> <br/><p id="txtfooter">2016 - Por Caique Aquino Borges & Vivian Rebeca Brazão<p> </footer>
 
 
 </body>
