@@ -5,19 +5,25 @@
 	$senha = "";
 	$banco = "SistemaProvasOnline";
 	
-	$conexao = mysql_connect( $servidor, $login, $senha );
+	$conexao = mysql_connect($servidor, $user, $senha);
 
-	$if( $conexao != null ){
+	if( $conexao != null ){
 
-		$bd = mysql_select_db( $banco );	
+		$bd = mysql_select_db($banco);
+
+		if($bd == null){
+
+			echo "Falha na conexão com o banco de dados.";	
+
+		}		
 		
-		if($bd == null)
-		echo "Falha na conexão com o banco de dados.";	
-	
 	} else {
-	
-		echo "Falha na conexão com o servidor.";
-	
+			
+		echo "Falha na conexão com o servidor";
+			
 	}
+		
+		
+
 
 ?>

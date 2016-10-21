@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="_css/material.min.css">
   <script src="_js/material.min.js"></script>
   <script src="_js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="_js/spdo.js"></script>
   
   <script type="text/javascript">
   window.onload = function mudaH4(){
@@ -23,6 +24,8 @@
 		}  
 		
 	}
+	
+	
   </script>
   
 </head>
@@ -53,10 +56,12 @@
 					<div id="texto">
 					<h4 id="titulo-conteudo" style="text-align: center">Bem vindo aluno! <br/> Por favor, identifique-se com seu CPF:</h4>
 					
-					<form action="#">
+					
+					
+					<form action="conexao_aluno.php" method="post" onsubmit='return cpfVazio()'>
  					 <div class="mdl-textfield mdl-js-textfield">
     					
-    					<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="cpf">
+    					<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="cpf" id="cpf">
     						
     						<label class="mdl-textfield__label" for="cpf">Seu CPF...</label>
     							
@@ -65,8 +70,8 @@
   					
   					 </div>
   					 
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Confirmar</button>
-
+					<input type="submit" value="Confirmar" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"/>
+						</br></br>
 					<input type="button" value="Voltar" onClick="window.location.href='index.html';" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="home">
   					 
 					</form>
