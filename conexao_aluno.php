@@ -22,6 +22,8 @@
 		$_SESSION['nomeAluno'] = $registro->nomeAluno;	
 	
 		mysql_close();
+		
+		header("location: funcAluno.php");
 	
 	} else {
 	

@@ -1,5 +1,9 @@
 <?php
-	include "verificaProfessor.php";
+	
+	include "verificaCpf.php";	
+	
+	$primeiroNome = strtok($nomeAluno, " ");
+	
 ?>
 
 <!DOCTYPE html>
@@ -60,22 +64,21 @@
 			<div class="rectangle">
 			
 					<div id="texto">
-					<h4 id="titulo-conteudo" style="text-align: center">Seja bem vindo(a) Prof. <a style="color: #FF5722"><?php echo $nomeProf?></a>!
+					<h4 id="titulo-conteudo" style="text-align: center">Seja bem vindo(a)
+					 <a style="color: #FF5722"> <?php echo $primeiroNome;	 ?></a>!
 					<br/>Escolha a funcionalidade que deseja utilizar:</h4>
 					
 					<form>
   					 
 					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="botaoFuncProf">
-					Cadastrar Aluno
+					Lista de provas
 					</button> 	 					 
-  					</br> 
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="botaoFuncProf" formaction="CadastroProva.html" >
-					Cadastrar Prova
+  					&nbsp;&nbsp;
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="botaoFuncProf" formaction="#" >
+					Ver provas
 					</button>
 					</br>
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="botaoFuncProf">
-					Vizualizar resultados dos alunos
-					</button>
+					
 					
 					</form>
 					
