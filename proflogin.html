@@ -38,18 +38,15 @@
 
 <div id="jumbo" class="jumbotron">
 	
-	<!--
+	
 	<div class="container">  
 	
  	 	<img src="_imagens/logo.png" id="logo" alt="Sistema de Provas Online"/>
  	 	<img src="_imagens/logo.png" id="logo-alt" alt="Sistema de Provas Online"/>
  	 	
    </div>
-   -->
    
-   <div>
-			<h1 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Sistema de Provas Online</h1>
-	</div>
+      
    
 </div>
 
@@ -65,17 +62,17 @@
 					<div id="texto">
 					<h4 id="titulo-conteudo" style="text-align: center">Bem vindo professor! <br/> Entre com seu login e senha:</h4>
 					
-					<form action="#" method="post">
+					<form action="conexao_professor.php" method="post">
  					 
  					  <div id="login" class="mdl-textfield mdl-js-textfield">
-    					<input class="mdl-textfield__input" type="text" id="user">
+    					<input class="mdl-textfield__input" type="text" name="user" id="user">
     					<label class="mdl-textfield__label" for="user">Usuário</label>
   					  </div>
   					  
 						<br/>				  
   					  
   					  <div  class="mdl-textfield mdl-js-textfield">
-    					<input class="mdl-textfield__input" type="password" id="senha">
+    					<input class="mdl-textfield__input" type="password" name="senha" id="senha">
     					<label class="mdl-textfield__label" for="senha">Senha</label>
   					  </div>
   					 
@@ -84,7 +81,7 @@
   					 	
   					 	<input type="button" value="Voltar" onClick="window.location.href='index.html';" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="home">
   						
-						<input type="submit" value="Logar" onClick="window.location.href='funcProf.html';" button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="botao">
+						<input type="submit" value="Logar" button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="botao">
   							 					 
   					 	
 					</form>

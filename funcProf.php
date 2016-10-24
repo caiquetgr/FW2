@@ -1,3 +1,9 @@
+<?php
+	session_start("professor");
+	
+	$nomeProf = $_SESSION['nomeProfessor'];
+?>
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -22,7 +28,8 @@
 		   document.getElementById('logo-alt').style.display = 'inline';
 			document.getElementById('titulo-conteudo').style.fontSize = 16 + 'px';
 			document.getElementById('txtfooter').style.fontSize = 13 + 'px';
-			document.getElementById('texto').style.paddingTop = 0.1 + '%';	
+			document.getElementById('texto').style.paddingTop = 0.1 + '%';
+			document.getElementById('footer').style.display = 'none';			
 		}  
 		
 	}
@@ -34,17 +41,15 @@
 
 <div id="jumbo" class="jumbotron">
 
-<!--
+
 	<div class="container">  
 	
  	 	<img src="_imagens/logo.png" id="logo" alt="Sistema de Provas Online"/>
  	 	<img src="_imagens/logo.png" id="logo-alt" alt="Sistema de Provas Online"/>
  	 	
    </div>
-   -->
-	<div>
-			<h1 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Sistema de Provas Online</h1>
-	</div>
+  
+	
 </div>
 
 
@@ -57,7 +62,8 @@
 			<div class="rectangle">
 			
 					<div id="texto">
-					<h4 id="titulo-conteudo" style="text-align: center">Escolha a funcionalidade que deseja utilizar:</h4>
+					<h4 id="titulo-conteudo" style="text-align: center">Seja bem vindo Prof. <a style="color: #FF5722"><?php echo $nomeProf?></a>!
+					<br/>Escolha a funcionalidade que deseja utilizar:</h4>
 					
 					<form>
   					 
@@ -86,7 +92,7 @@
 </div>
 
 
-<footer class="footer"> <br/><p id="txtfooter">2016 - Por Caique Aquino Borges & Vivian Rebeca Brazão<p> </footer>
+<footer id="footer" class="footer"> <br/><p id="txtfooter">2016 - Por Caique Aquino Borges & Vivian Rebeca Brazão<p> </footer>
 
 
 </body>

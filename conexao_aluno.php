@@ -11,15 +11,24 @@
 	
 	$resultado = mysql_query($sql) or die(mysql_error());
 	
-	$registro = mysql_fetch_object($resultado);
+	if($resultado != false && mysql_num_rows($resultado) != false && mysql_num_rows($resultado) > 0 ){
 	
-	echo "Bem vindo $registro->nomeAluno".", seu cpf é $registro->cpfAluno"; 
+		$registro = mysql_fetch_object($resultado);
 	
-	
-	$_SESSION['cpfAluno'] = $registro->cpfAluno;
-	$_SESSION['nomeAluno'] = $registro->nomeAluno;	
+		echo "Bem vindo $registro->nomeAluno".", seu cpf é $registro->cpfAluno"; 
 	
 	
+		$_SESSION['cpfAluno'] = $registro->cpfAluno;
+		$_SESSION['nomeAluno'] = $registro->nomeAluno;	
+	
+		mysql_close();
+	
+	} else {
+	
+		echo "<script> alert('CPF não encontrado!');";
+		echo "javascript:window.location='alunocpf.html'; </script>";	
+	
+	}
 
 ?>
 
