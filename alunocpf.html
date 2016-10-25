@@ -18,9 +18,12 @@
 	//alert(largura);
 	
 		if(largura <= 480){
+			document.getElementById('logo').src = "_imagens/logoabrev.png";
+		   document.getElementById('logo-alt').style.display = 'inline';
 			document.getElementById('titulo-conteudo').style.fontSize = 16 + 'px';
 			document.getElementById('txtfooter').style.fontSize = 13 + 'px';
-			document.getElementById('texto').style.paddingTop = 0.1 + '%';	
+			document.getElementById('texto').style.paddingTop = 0.1 + '%';
+			document.getElementById('footer').style.display = 'none';	
 		}  
 		
 	}
@@ -87,7 +90,7 @@
 </div>
 
 
-<footer class="footer"> <br/><p id="txtfooter"> 2016 - Por Caique Aquino Borges & Vivian Rebeca Brazão </p> </footer>
+<footer id="footer" class="footer"> <br/><p id="txtfooter"> 2016 - Por Caique Aquino Borges & Vivian Rebeca Brazão </p> </footer>
 
 
 </body>

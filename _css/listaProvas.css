@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+.jumbotron{
+	text-align: center;
+	background-color: #2196F3;
+	padding: 0.2em;
+	font-family: 'Roboto', sans-serif;
+	color: #FFFFFF;
+}
+
+div.row{
+	text-align: center;
+	color: black;
+}
+
+div.col-md-2{
+	padding: 4.5px 0px 4.5px 0px;
+	border-collapse: collapse;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+}
+
+div#topo{
+	padding: 4.5px 0px 4.5px 0px;
+	border-collapse: collapse;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	font-size: 20px;
+}
+
+#cor0{
+	background-color: #42A5F5;
+}
+
+#cor1{
+	background-color: #64B5F6;
+}
+
+a:link{
+	text-decoration: none;
+	background-color: lightgreen;
+	color: black;
+}
+
+#botao{
+	
+	color: black;
+	background-color: lightgreen;
+	padding: 3px 4px 3px 4px;
+	border: 1px solid;
+	border-radius: 7px;
+	text-decoration: none;
+	
+	box-shadow: 1px 1px 5px black;
+}
+
+#botao:hover{
+	background-color: yellow;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#botao2{
+	background-color: #EF5350;
+	padding: 3px 4px 3px 4px;
+	border: 1px solid;
+	border-radius: 7px;
+}
+
+#botao2:hover{
+	background-color: #C62828;
+	font-weight: bold;
+	cursor: default;
+}

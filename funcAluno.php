@@ -75,7 +75,7 @@
 					</button> 	 					 
   					&nbsp;&nbsp;
 					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="botaoFuncProf" formaction="#" >
-					Ver provas
+					Provas feitas
 					</button>
 					</br>
 					
