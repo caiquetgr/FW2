@@ -10,10 +10,32 @@
   <link rel="stylesheet" href="_css/material.min.css">
   <script src="_js/material.min.js"></script>
   <script src="_js/bootstrap.min.js"></script>
+  <script src="_js/jquery-3.1.1.js"></script>
+  <script src="_js/jquery-ui.js"></script>
+  <link rel="stylesheet" type="text/css" href="_css/jquery-ui.css">
+  
+  
+  
+   
+<script>
+$( function() {
+$("#data").datepicker({dateFormat: "dd/mm/yy", changeYear: true, changeMonth: true, yearRange: "1950:*",
+ dayNamesMin: ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"],
+ monthNamesShort: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"]});
+ 
+ $("#dataF").datepicker({dateFormat: "dd/mm/yy", changeYear: true, changeMonth: true, yearRange: "1950:*",
+ dayNamesMin: ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"],
+ monthNamesShort: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"]});
+} );
+</script>
+  
+  
   
   <script type="text/javascript">
   window.onload = function mudaH4(){
 	var largura = window.innerWidth;
+	
+
 	
 	//alert(largura);
 	
@@ -26,6 +48,12 @@
 		}  
 		
 	}
+  </script>
+  
+  <script>
+  
+  
+  
   </script>
   
 </head>
@@ -58,12 +86,12 @@
 				<div id="texto">
 				<h4 id="titulo-conteudo" style="text-align: center">Cadastro de Prova</h4>
 										
-					<form action="#">
+					<form action="CadastroProva2.php" method="post">
 					
-					<div id="perguntasCadastroProva">Título da prova: <input class="mdl-textfield__input" type="text" id="titulo"></div></br>
-					<div id="perguntasCadastroProva">Quantas questões deseja cadastrar?<input class="mdl-textfield__input" type="text" id="qntPerg"></div></br>
-					<div id="perguntasCadastroProva">Data de Início: <input class="mdl-textfield__input"type="datetime" id="inicio"></div></br>
-					<div id="perguntasCadastroProva">Data de Término: <input class="mdl-textfield__input" type="datetime" id="termino"></div>
+					<div id="perguntasCadastroProva">Título da prova: <input class="mdl-textfield__input" type="text" name="titulo" id="titulo"></div></br>
+					<div id="perguntasCadastroProva">Quantas questões deseja cadastrar?<input class="mdl-textfield__input" name="qntPerg" type="text" id="qntPerg"></div></br>
+					<div id="perguntasCadastroProva">Data de Início: <input class="mdl-textfield__input"  name="inicio" type="text" id="data"></div></br>
+					<div id="perguntasCadastroProva">Data de Término: <input class="mdl-textfield__input"  name="fim" type="text" id="dataF"></div>
 
 					</br>
 					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
@@ -81,7 +109,7 @@
 </div>
 
 
-<footer class="footer"> <br/><p id="txtfooter">2016 - Por Caique Aquino Borges & Vivian Rebeca Brazão<p> </footer>
+
 
 
 </body>

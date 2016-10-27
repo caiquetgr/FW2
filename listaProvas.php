@@ -132,17 +132,17 @@
 				 
 				 	
 				 echo "<div class='col-md-2'>";
-				 
+				     
 				 
 				 		//Testando as datas, imprimindo a situação (Aberta/Fechada/Aguarde) dependendo da data atual
 				 if(strtotime($hoje) > strtotime($dataFimTestada)){
-				 		echo "<span style='color: red; font-weight: bold'>Fechada</span>";
+				 		echo "<span style='color: red; font-weight: bold' id='disponibilidade' >Fechada</span>";
 				 		$botao = false;
 				 }else if(strtotime($hoje) <= strtotime($dataFimTestada) and strtotime($hoje) >= strtotime($dataIniTestada)){
-				 		echo "<span style='color: #76FF03; font-weight: bold'>Aberta</span>";
+				 		echo "<span style='color: #76FF03; font-weight: bold' id='disponibilidade' >Aberta</span>";
 				 		$botao = true;	
 				 } else {
-						echo "<span style='color: #424242; font-weight: bold'>Aguarde</span>";						
+						echo "<span style='color: #424242; font-weight: bold' id='disponibilidade' >Aguarde</span>";						
 						$botao = false;
 				 }
 				 

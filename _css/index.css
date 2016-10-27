@@ -122,7 +122,7 @@ input#titulo{
 	
 }
 
- input#inicio, input#termino {
+ input#data, input#dataF {
 	width: 30%;
 	display: inline-block;
  }

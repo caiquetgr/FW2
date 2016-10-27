@@ -74,7 +74,7 @@
 					</button>
 					</br>
 					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="botaoFuncProf">
-					Vizualizar resultados dos alunos
+					Listar Provas
 					</button>
 					
 					</form>

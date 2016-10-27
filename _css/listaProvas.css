@@ -31,11 +31,15 @@ div#topo{
 }
 
 #cor0{
-	background-color: #42A5F5;
+	background-color: #90caf9;
 }
 
 #cor1{
-	background-color: #64B5F6;
+	background-color: #e3f2fd;
+}
+
+#disponibilidade{
+	text-shadow: 0px 0px 2px darkgreen;
 }
 
 a:link{
