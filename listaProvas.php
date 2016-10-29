@@ -6,10 +6,16 @@
 	
 	header('Content-Type: text/html; charset=UTF-8');	
 	
-	$sql = "SELECT m.idModeloProva, m.tituloModeloProva, m.dataInicioModeloProva, m.dataTerminoModeloProva, p.nomeProfessor FROM
-	ModeloProva as m INNER JOIN Professor as p on m.cpfProfessor = p.cpfProfessor ORDER BY m.dataInicioModeloProva DESC";
-				
+	/*$sql = "SELECT m.idModeloProva, m.tituloModeloProva, m.dataInicioModeloProva, m.dataTerminoModeloProva, p.nomeProfessor FROM
+	ModeloProva as m INNER JOIN Professor as p on m.cpfProfessor = p.cpfProfessor ORDER BY m.dataInicioModeloProva DESC";*/
+	
+	$sql = "SELECT f.cpfAluno, m.idModeloProva, m.tituloModeloProva, m.dataInicioModeloProva, m.dataTerminoModeloProva,
+		  p.nomeProfessor FROM ModeloProva as m INNER JOIN Professor as p on m.cpfProfessor = p.cpfProfessor INNER JOIN
+		  Aluno_PodeFazer_Prova as f on m.idModeloProva = f.idModeloProva ORDER BY m.dataInicioModeloProva DESC";
+	
+	
    $resultado = mysql_query($sql) or die(mysql_error());	
+   
    			
 		
 ?>
@@ -91,13 +97,18 @@
 			
 			$hoje = date('Y-m-d H:i:s');		
 		
-		while($registro = mysql_fetch_object($resultado)){
-			
+		
+	
+				//Percorrendo cada linha do resultado
+			while($registro = mysql_fetch_object($resultado)){
+					
+				if( strcmp($registro->cpfAluno, $cpfAluno) == 0 ){	
+					
 			/* O id linhas depende da $cor, então se for 0, será uma cor, e se for 1, outra */
-			if($i % 2 == 0)
-				$cor = 0;			
-			else 	
-				$cor = 1;	
+				if($i % 2 == 0)
+					$cor = 0;			
+				else 	
+					$cor = 1;	
 			
 			//Data da prova, formatadas	
 			$dataInicio = date_create($registro->dataInicioModeloProva);
@@ -151,7 +162,7 @@
 				 echo "<div class='col-md-2'>";
 				 
 				 if($botao == true)
-				  		echo "<a href='#'><span id='botao'>INICIAR</span></a>";
+				  		echo "<a href='fazerProva.php=?idModeloProva=$registro->idModeloProva'><span id='botao'>INICIAR</span></a>";
 				 else
 				 		echo "<span id='botao2'>INICIAR</span>";
 				  	
@@ -162,8 +173,13 @@
 			//Mudando a cor pra próxima linha
 			$i++;		
 		
-		}
+				
+			}
+			
+		} //Final do while geral
 		
+		
+		mysql_close();
 		
 		
 	?>			

@@ -60,7 +60,7 @@
 			<div class="rectangle">
 			
 					<div id="texto">
-					<h4 id="titulo-conteudo" style="text-align: center">Seja bem vindo(a) Prof. <a style="color: #FF5722"><?php echo $nomeProf?></a>!
+					<h4 id="titulo-conteudo" style="text-align: center">Seja bem vindo(a) Prof. <a style="color: #FF5722"><?php echo strtok($nomeProf,' ')?></a>!
 					<br/>Escolha a funcionalidade que deseja utilizar:</h4>
 					
 					<form>
