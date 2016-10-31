@@ -1,3 +1,7 @@
+<?php
+	include "verificaProfessor.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -62,17 +66,14 @@ $("#data").datepicker({dateFormat: "dd/mm/yy", changeYear: true, changeMonth: tr
 
 <div id="jumbo" class="jumbotron">
 
-<!--
 	<div class="container">  
 	
  	 	<img src="_imagens/logo.png" id="logo" alt="Sistema de Provas Online"/>
  	 	<img src="_imagens/logo.png" id="logo-alt" alt="Sistema de Provas Online"/>
  	 	
    </div>
-   -->
-	<div>
-			<h1 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Sistema de Provas Online</h1>
-	</div>
+   
+	
 </div>
 
 
@@ -88,9 +89,9 @@ $("#data").datepicker({dateFormat: "dd/mm/yy", changeYear: true, changeMonth: tr
 										
 					<form action="CadastroProva2.php" method="post">
 					
-					<div id="perguntasCadastroProva">Título da prova: <input class="mdl-textfield__input" type="text" name="titulo" id="titulo"></div></br>
-					<div id="perguntasCadastroProva">Quantas questões deseja cadastrar?<input class="mdl-textfield__input" name="qntPerg" type="text" id="qntPerg"></div></br>
-					<div id="perguntasCadastroProva">Data de Início: <input class="mdl-textfield__input"  name="inicio" type="text" id="data"></div></br>
+					<div id="perguntasCadastroProva">Título da prova: <input class="mdl-textfield__input" type="text" name="titulo" id="titulo"></div><br/>
+					<div id="perguntasCadastroProva">Quantas questões deseja cadastrar?<input class="mdl-textfield__input" name="qntPerg" type="text" id="qntPerg"></div><br/>
+					<div id="perguntasCadastroProva">Data de Início: <input class="mdl-textfield__input"  name="inicio" type="text" id="data"></div><br/>
 					<div id="perguntasCadastroProva">Data de Término: <input class="mdl-textfield__input"  name="fim" type="text" id="dataF"></div>
 
 					</br>

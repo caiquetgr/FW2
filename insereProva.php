@@ -9,8 +9,14 @@
 	$dataInicio = $_POST['inicio'];
 	$dataFim = $_POST['fim'];
 	
-	$dataInicioFormatada = date_format($dataInicio, 'Y-m-d');
-	$dataFimFormatada = date_format($dataFim, 'Y-m-d');
+	$di = DateTime::createFromFormat('d/m/Y', $dataInicio);
+	$df = DateTime::createFromFormat('d/m/Y', $dataFim);
+	
+	$dataInicioFormatada = $di->format('Y-m-d');
+	$dataFimFormatada = $df->format('Y-m-d');
+	
+	echo "Data ini formatada: $dataInicioFormatada <br> Data fim formatada: $dataFimFormatada <br>";
+	echo "Data ini : $dataInicio<br> Data fim: $dataFim <br>";
 	
 	$sql = "INSERT INTO ModeloProva values (DEFAULT, '$dataInicioFormatada', '$dataFimFormatada', '$titulo', '$cpfProf', $qntdPerg)";
 	
@@ -23,7 +29,7 @@
 	//Percorrendo cada pergunta
 	for($i = 1; $i <= $qntdPerg; $i++){
 		
-		$pergunta = $_POST['perg$i'];
+		$pergunta = $_POST['perg'.$i.''];
 		
 		$sqlPergunta = "INSERT INTO Pergunta values (DEFAULT, '$pergunta', $idModeloProva)";
 		
@@ -36,12 +42,12 @@
 		
 				$alt = $_POST['p'.$i.'alt'.$j.''];
 		
-				$resposta = $_POST['p'.$i.'resposta'];
+				$resposta = $_POST['p'.$i.'alt'];
 		
 				//Se resposta não estiver em branco
 				if( strcmp($alt, '') != 0 ){
 					//Se resposta for marcada como correta, coloca valor 1 (true) no banco, se não coloca 0 (false)
-					if( strcmp($resposta, "$j") ){
+					if( strcmp($resposta, "$j") == 0 ){
 						//Resposta correta!
 						$sqlAlt = "INSERT INTO Alternativa values (DEFAULT, '$alt', 1, $idPergunta)";
 						mysql_query($sqlAlt) or die(mysql_error());
@@ -66,6 +72,8 @@
 	mysql_close();
 	
 	echo "<script> alert('Prova registrada com sucesso!!');";
-	echo "javascript:window.location='alunosPermitidos.php?id=$idModeloProva'; </script>";	
+	
+	
+	//echo "javascript:window.location='alunosPermitidos.php?id=$idModeloProva'; </script>";	
 
 ?>
