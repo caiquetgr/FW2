@@ -15,9 +15,6 @@
 	$dataInicioFormatada = $di->format('Y-m-d');
 	$dataFimFormatada = $df->format('Y-m-d');
 	
-	echo "Data ini formatada: $dataInicioFormatada <br> Data fim formatada: $dataFimFormatada <br>";
-	echo "Data ini : $dataInicio<br> Data fim: $dataFim <br>";
-	
 	$sql = "INSERT INTO ModeloProva values (DEFAULT, '$dataInicioFormatada', '$dataFimFormatada', '$titulo', '$cpfProf', $qntdPerg)";
 	
 	mysql_query($sql) or die(mysql_error());
@@ -72,8 +69,6 @@
 	mysql_close();
 	
 	echo "<script> alert('Prova registrada com sucesso!!');";
-	
-	
-	//echo "javascript:window.location='alunosPermitidos.php?id=$idModeloProva'; </script>";	
+	echo "javascript:window.location='alunosPermitidos.php?id=$idModeloProva'; </script>";	
 
 ?>
