@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+.jumbotron{
+	text-align: center;
+	background-color: #2196F3;
+	padding: 0.2em;
+	font-family: 'Roboto', sans-serif;
+	color: #FFFFFF;
+}
+
+
+div.col-md-2{
+	padding: 4.5px 0px 4.5px 0px;
+	border-collapse: collapse;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+}
+
+div#topo{
+	padding: 4.5px 0px 4.5px 0px;
+	border-collapse: collapse;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	font-size: 20px;
+	background-color: #FF9800;
+	font-weight: bold;
+	text-align: center;
+	color: black;
+}
+
+
+
+#checkbox{
+	border-left: 1px solid black;
+	border-bottom: 1px solid black;
+	
+	text-align: center;
+	
+	
+	
+	background-color: #80D8FF;
+	max-height: 25px;
+	padding: 2px 0 2.5px 0;
+}
+
+#nomeAluno{
+	text-align: center;
+	border-left: 1px solid black;
+	border-bottom: 1px solid black;
+	background-color: #40C4FF;
+	padding: 2px 0 2px 0;
+}
+
+#cpfAluno{
+	text-align: center;
+	border-left: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	background-color: #90caf9;
+	letter-spacing: 0.5px;
+	padding: 2px 0 2px 0;
+}

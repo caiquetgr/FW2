@@ -69,7 +69,7 @@
 					Cadastrar Aluno
 					</button> 	 					 
   					</br> 
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="botaoFuncProf" formaction="CadastroProva.html" >
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="botaoFuncProf" formaction="CadastroProva.php" >
 					Cadastrar Prova
 					</button>
 					</br>

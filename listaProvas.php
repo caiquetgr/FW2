@@ -82,9 +82,9 @@
 			echo "</div>";
 			
 			echo "<div class='row' style='background-color: #FF9800; font-weight: bold;'>";
-				 echo "<div class='col-md-2'>"; echo "Nome da prova"; echo "</div>";
-				 echo "<div class='col-md-2'>"; echo "Nome do professor"; echo "</div>";
-				 echo "<div class='col-md-2'>"; echo "Data de início da prova"; echo "</div>";
+				 echo "<div class='col-md-2'>"; echo "Nome da prova"; 			  echo "</div>";
+				 echo "<div class='col-md-2'>"; echo "Nome do professor"; 		  echo "</div>";
+				 echo "<div class='col-md-2'>"; echo "Data de início da prova";  echo "</div>";
 				 echo "<div class='col-md-2'>"; echo "Data de término da prova"; echo "</div>";
 				 echo "<div class='col-md-2'>"; echo "Disponibilidade da prova"; echo "</div>";
 				 echo "<div class='col-md-2'>"; echo "Fazer a prova"; echo "</div>";

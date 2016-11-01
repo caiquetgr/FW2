@@ -19,7 +19,10 @@
   <link rel="stylesheet" type="text/css" href="_css/jquery-ui.css">
   
   
-  
+<style>
+	.row{ background-color: white;	}
+	#perguntasCadastroProva { font-size: 16px }
+</style>  
    
 <script>
 $( function() {
@@ -80,32 +83,61 @@ $("#data").datepicker({dateFormat: "dd/mm/yy", changeYear: true, changeMonth: tr
 <div class="container-fluid">
 	
 	<div class="row" id="centro">
-	<div class="col-md-3"></div>
-		<div class="col-md-6">
-			<div class="rectangle">
-			
-				<div id="texto">
-				<h4 id="titulo-conteudo" style="text-align: center">Cadastro de Prova</h4>
-										
+			<div class='col-md-4'></div>
+			<div class='col-md-4'>
+			<h4 id="titulo-conteudo" style="text-align: center">Cadastro de Prova</h4>
+			</div>
+			<div class='col-md-4'></div>
+	</div>								
 					<form action="CadastroProva2.php" method="post">
-					
+		
+		<div class="row" id="centro">	
+			<div class='col-md-2'></div>	
+					<div class='col-md-8'>	
 					<div id="perguntasCadastroProva">Título da prova: <input class="mdl-textfield__input" type="text" name="titulo" id="titulo"></div><br/>
-					<div id="perguntasCadastroProva">Quantas questões deseja cadastrar?<input class="mdl-textfield__input" name="qntPerg" type="text" id="qntPerg"></div><br/>
+					</div>
+			<div class='col-md-2'></div>
+      </div>	
+      
+      <div class="row" id="centro">	
+			<div class='col-md-2'></div>	
+					<div class='col-md-8'>	
+					<div id="perguntasCadastroProva">Quantas questões deseja cadastrar? &nbsp;<input class="mdl-textfield__input" name="qntPerg" type="text" id="qntPerg"></div><br/>
+					</div>
+			<div class='col-md-2'></div>
+      </div>	
+      
+      <div class="row" id="centro">	
+			<div class='col-md-2'></div>	
+					<div class='col-md-8'>	
 					<div id="perguntasCadastroProva">Data de Início: <input class="mdl-textfield__input"  name="inicio" type="text" id="data"></div><br/>
+					</div>
+			<div class='col-md-2'></div>
+      </div>
+		
+		<div class="row" id="centro">	
+			<div class='col-md-2'></div>	
+					<div class='col-md-8'>	
 					<div id="perguntasCadastroProva">Data de Término: <input class="mdl-textfield__input"  name="fim" type="text" id="dataF"></div>
-
-					</br>
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+					</div>
+			<div class='col-md-2'></div>
+      </div>
+		
+	
+		<div class="row" id="centro" >	
+			<div class='col-md-2'></div>				
+				<div class='col-md-8' align='center'>					
+					<button style="margin-top: 25px;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
 					Próxima
 					</button>
-					</div>
-					
+				</div>
+			<div class='col-md-2'></div>		
+		</div>			
 					</form>
 								
-			</div>		
-		</div>		
-		</div>
-		<div class="col-md-3"></div>
+					
+	
+		
 	
 </div>
 
