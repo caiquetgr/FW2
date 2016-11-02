@@ -162,7 +162,7 @@
 				 echo "<div class='col-md-2'>";
 				 
 				 if($botao == true)
-				  		echo "<a href='fazerProva.php=?idModeloProva=$registro->idModeloProva'><span id='botao'>INICIAR</span></a>";
+				  		echo "<a href='prova.php?idModeloProva=$registro->idModeloProva'><span id='botao'>INICIAR</span></a>";
 				 else
 				 		echo "<span id='botao2'>INICIAR</span>";
 				  	
