@@ -40,9 +40,10 @@
 <body>
 
 <style type="css">
-	input#pergunta{
+	textarea {
 		border-width: 1px;
 		border-color: #42A5F5;
+		width: 70%;
 	}
 	
 	.col-md-8{
@@ -91,7 +92,7 @@
 					echo "<div class='input-container'>";
 					echo "<label>Questão".$i."</label>";
 					echo "</div>";
-					echo "<textarea class='mdl-textfield__input' type='text' rows='5' cols='10' name='perg".$i."' id='pergunta' style='border-color: #42A5F5'></textarea></td>";
+					echo "<textarea class='mdl-textfield__input' type='text' rows='5' style='width: 50%; border-color: #42A5F5;' name='perg".$i."' id='pergunta' style='border-color: #42A5F5'></textarea></td>";
 					echo "</div>";
 					
 					//alternativas
