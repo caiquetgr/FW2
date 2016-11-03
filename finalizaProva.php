@@ -62,10 +62,13 @@
 			
 	}
 	
+	
+	
 	echo "<script>
 			alert('Prova finalizada com sucesso!');
 			javascript:window.location='resultadoIndividual.php?idProvaAluno=$idProvaAluno'; 
 			</script>";
+				
 	
 	mysql_close();
 

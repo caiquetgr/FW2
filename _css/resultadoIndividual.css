@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+.jumbotron{
+	text-align: center;
+	background-color: #2196F3;
+	padding: 0.1em;
+	font-family: 'Roboto', sans-serif;
+	color: #FFFFFF;
+}
+
+#titulo-resultado{
+	background-color: #FFB74D;
+	border: 1px solid black;
+	border-radius: 8px;
+	box-shadow: 1px 1px 5px black;
+	text-align: center;
+	font-size: 22px;
+	padding: 10px;
+}
+
+#headerProva{
+	font-size: 20px;
+	padding: 10px;
+	background-color: #EEEEEE;
+	letter-spacing: 1px;
+	border: 1px solid black;
+	border-radius: 8px;
+	text-align: center;
+}
+
+#nome{
+	padding-left: 2%;
+}
+
+#espaco{
+	padding-left: 5%;
+	padding-right: 5%;
+}

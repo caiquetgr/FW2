@@ -4,10 +4,25 @@
 	
 	header('Content-Type: text/html; charset=UTF-8');	
 	
-	$idProvaAluno = $_POST['idProvaAluno'];
+	$idProvaAluno = $_GET['idProvaAluno'];
 	
-	
+	$sqlProvaAluno = "SELECT * FROM ProvaAluno as p INNER JOIN Aluno ON
+	 p.cpfAluno = Aluno.cpfAluno WHERE idProvaAluno=$idProvaAluno";
    	
+	$resultadoProvaAluno = mysql_query($sqlProvaAluno) or die(mysql_error());
+	
+	$ProvaAluno = mysql_fetch_object($resultadoProvaAluno);
+
+		//Dados da prova e aluno	
+	$nomeAluno = $ProvaAluno->nomeAluno;
+	$cpfAluno = $ProvaAluno->cpfAluno;
+	$notaProva = $ProvaAluno->notaProvaAluno;
+	$idModeloProva = $ProvaAluno->idModeloProva;
+	
+	
+	
+		
+	
 			
 ?>
 
@@ -20,7 +35,7 @@
   
   <link rel="stylesheet" type="text/css" href="_css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="_css/index.css">
-  <link rel="stylesheet" type="text/css" href="_css/prova.css">
+  <link rel="stylesheet" type="text/css" href="_css/resultadoIndividual.css">
   <link rel="stylesheet" href="_css/material.min.css">
   
   
@@ -64,7 +79,32 @@
 
 <div class="container-fluid">
 	
+		<div class='row'>
+			<div class='col-md-2'></div>
+			<div class='col-md-8' id='titulo-resultado'> Resultado da Prova </div>			
+			<div class='col-md-2'></div>
+		</div>	<br/>
+		 
+		
+		
+	<?php
 	
+			$corNota = ($notaProva < 6 ? 'red' : '#B2FF59');
+	
+			echo "<div class='row'>";
+				echo "<div class='col-md-2'></div>";
+				  
+				 	echo "<div class='col-md-4' id='headerProva'> Nome: <strong>$nomeAluno</strong> </div>";
+					echo "<div class='col-md-2' id='headerProva' > CPF: <strong>$cpfAluno</strong> </div>";
+					echo "<div class='col-md-2' id='headerProva' 
+							style='background-color: $corNota'> Nota: <strong>$notaProva</strong> </div>";
+					
+				echo "<div class='col-md-2'></div>";
+			echo "</div>";		
+			
+		mysql_close();	
+	
+	?>
 
 </div>
 

@@ -152,7 +152,7 @@
 				 		echo "<span style='color: #76FF03; font-weight: bold' id='disponibilidade' >Aberta</span>";
 				 		$botao = true;	
 				 } else {
-						echo "<span style='color: #424242; font-weight: bold' id='disponibilidade' >Aguardando</span>";						
+						echo "<span style='color: black; font-weight: bold' id='disponibilidade' >Aguardando</span>";						
 						$botao = true;
 				 }
 				 
