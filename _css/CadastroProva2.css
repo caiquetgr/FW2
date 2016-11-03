@@ -1,0 +1,39 @@
+@charset "UTF-8";
+	#pergunta{
+		width: 70%;
+		display: block;
+		margin: auto;
+		border-width: 1px;
+		border-color: #42A5F5;
+		text-align: center;
+	}
+	
+	#alternativa{
+		margin-top: 10px;
+	    margin-left: 5px;
+		border: 0px solid #42A5F5;
+		border-bottom: 1px solid #42A5F5;
+		width: 50%;
+	}
+	
+	#questao{
+		margin-top: 10px;
+		
+	}
+	
+	#linha-titulo{
+		border: 1px solid black;
+		background-color: #FFB74D;
+		border-radius: 8px;
+		box-shadow: 2px 2px 8px black;
+		
+	}
+	
+	#instrucoes{
+		border: 1px solid black;
+		background-color: #e0e0e0;
+		border-radius: 8px;
+		box-shadow: 2px 2px 8px black;
+		margin-top: 20px;
+	}
+	
