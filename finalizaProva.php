@@ -34,14 +34,13 @@
 	
 	}	
 	
-	echo "Quantidade de perguntas: ". ($numeroPergunta - 1);
-	echo "<br>Respostas certas: ".$perguntasCorretas;	
+		
 	
 	$notaProva = ($perguntasCorretas / ($numeroPergunta - 1)) * 10;
 	
 	$notaProva = number_format($notaProva, 2);
 	
-	echo "<br>Nota da prova: $notaProva";
+	
 	
 		//Inserindo dados da prova feita pelo aluno
 	$sqlInsereProva = "INSERT INTO ProvaAluno (notaProvaAluno, cpfAluno, idModeloProva) values ( $notaProva ,
