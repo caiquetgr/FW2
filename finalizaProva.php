@@ -66,7 +66,7 @@
 	
 	echo "<script>
 			alert('Prova finalizada com sucesso!');
-			javascript:window.location='resultadoIndividual.php?idProvaAluno=$idProvaAluno'; 
+			javascript:window.location='resultadoIndividual.php?idProvaAluno=".$idProvaAluno."&prova=true'; 
 			</script>";
 				
 	

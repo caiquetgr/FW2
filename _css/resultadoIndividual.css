@@ -8,6 +8,10 @@
 	color: #FFFFFF;
 }
 
+body{
+	background-color: white;
+}
+
 #titulo-resultado{
 	background-color: #FFB74D;
 	border: 1px solid black;
@@ -21,8 +25,8 @@
 #headerProva{
 	font-size: 20px;
 	padding: 10px;
-	background-color: #EEEEEE;
-	letter-spacing: 1px;
+	background-color: #F9A825;
+	letter-spacing: 0.5px;
 	border: 1px solid black;
 	border-radius: 8px;
 	text-align: center;
@@ -35,4 +39,19 @@
 #espaco{
 	padding-left: 5%;
 	padding-right: 5%;
+}
+
+#pergunta{
+	background-color: #FFB74D;
+	padding: 5px;
+	border: 1px solid black;
+	border-radius: 8px;
+}
+
+#linha-alternativa{
+	padding-top: 4px;
+}
+
+#alternativa{
+	font-size: 16px;
 }

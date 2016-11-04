@@ -16,6 +16,7 @@
   <script src="_js/bootstrap.min.js"></script>
   <script src="_js/jquery-3.1.1.js"></script>
   <script src="_js/jquery-ui.js"></script>
+  <script src="_js/spdo.js"></script>
   <link rel="stylesheet" type="text/css" href="_css/jquery-ui.css">
   
   
@@ -89,7 +90,7 @@ $("#data").datepicker({dateFormat: "dd/mm/yy", changeYear: true, changeMonth: tr
 			</div>
 			<div class='col-md-4'></div>
 	</div>								
-					<form action="CadastroProva2.php" method="post">
+					<form onsubmit='return validaCamposCadastro()' action="CadastroProva2.php" method="post">
 		
 		<div class="row" id="centro">	
 			<div class='col-md-2'></div>	
@@ -99,10 +100,15 @@ $("#data").datepicker({dateFormat: "dd/mm/yy", changeYear: true, changeMonth: tr
 			<div class='col-md-2'></div>
       </div>	
       
-      <div class="row" id="centro">	
+      <div class="row" id="centro" >	
 			<div class='col-md-2'></div>	
-					<div class='col-md-8'>	
-					<div id="perguntasCadastroProva">Quantas questões deseja cadastrar? &nbsp;<input class="mdl-textfield__input" name="qntPerg" type="text" id="qntPerg"></div><br/>
+					<div class='col-md-8' align='center' style='margin-top: -15px;'>	
+						 	<div id="perguntasCadastroProva">Quantas questões deseja cadastrar? &nbsp;
+							<div class="mdl-textfield mdl-js-textfield">						 	
+						 	<input class="mdl-textfield__input" 
+							pattern="-?[0-9]*(\.[0-9]+)?" name="qntPerg" type="text" id="qntPerg"></div>
+							<span class="mdl-textfield__error"><br/>Insira apenas números, sem pontuação!</span>
+							</div>
 					</div>
 			<div class='col-md-2'></div>
       </div>	
@@ -110,7 +116,8 @@ $("#data").datepicker({dateFormat: "dd/mm/yy", changeYear: true, changeMonth: tr
       <div class="row" id="centro">	
 			<div class='col-md-2'></div>	
 					<div class='col-md-8'>	
-					<div id="perguntasCadastroProva">Data de Início: <input class="mdl-textfield__input"  name="inicio" type="text" id="data"></div><br/>
+					<div id="perguntasCadastroProva">Data de Início: <input class="mdl-textfield__input" 
+						 name="inicio" type="text" maxlength='10' id="data" onkeyup="formatacaoData(this)"></div><br/>
 					</div>
 			<div class='col-md-2'></div>
       </div>
@@ -118,7 +125,8 @@ $("#data").datepicker({dateFormat: "dd/mm/yy", changeYear: true, changeMonth: tr
 		<div class="row" id="centro">	
 			<div class='col-md-2'></div>	
 					<div class='col-md-8'>	
-					<div id="perguntasCadastroProva">Data de Término: <input class="mdl-textfield__input"  name="fim" type="text" id="dataF"></div>
+					<div id="perguntasCadastroProva">Data de Término: <input class="mdl-textfield__input"
+					     name="fim" type="text" maxlength='10' id="dataF" onkeyup="formatacaoData(this)"></div>
 					</div>
 			<div class='col-md-2'></div>
       </div>

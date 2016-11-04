@@ -15,6 +15,7 @@
 	$dataInicioFormatada = $di->format('Y-m-d');
 	$dataFimFormatada = $df->format('Y-m-d');
 	
+		
 	$sql = "INSERT INTO ModeloProva values (DEFAULT, '$dataInicioFormatada', '$dataFimFormatada', '$titulo', '$cpfProf', $qntdPerg)";
 	
 	mysql_query($sql) or die(mysql_error());
