@@ -8,7 +8,7 @@
 	
 	header('Content-Type: text/html; charset=UTF-8');	
 	
-	$idModeloProva = $_GET['id'];	
+	$idModeloProva = $_GET['idModeloProva'];	
 	
 	$sql = "select * from Aluno WHERE cpfAluno NOT IN ( SELECT cpfAluno from Aluno_PodeFazer_Prova WHERE
 	        idModeloProva = $idModeloProva ) ORDER BY nomeAluno";
@@ -99,7 +99,7 @@
 	//Contador para saber se já tem dois alunos na mesma linha
 	$contaLinha = 1;	
 	
-		
+		if(mysql_num_rows($resultado) > 0 ){
 		while($alunosRegistrados = mysql_fetch_object($resultado)){
 	
 		while($alunosPermitidos = mysql_fetch_object($resultado2)){	
@@ -170,6 +170,44 @@
 		
 	 	}
 	
+		} else {
+		
+			while($alunosPermitidos = mysql_fetch_object($resultado2)){	
+			
+			if($contaLinha == 1){	
+	 		echo "<div class='row'>";
+	 		echo "<div class='col-md-1'></div>";	
+		}
+				
+				echo "<div class='col-md-1' id='checkbox'>";
+				echo "<input type='checkbox' name='caixa".$contador."' value='".$alunosPermitidos->cpfAluno."' checked/>";	
+				echo "</div>";	
+						
+						
+					
+			echo "<div class='col-md-3' id='nomeAluno'>";
+				echo $alunosPermitidos->nomeAluno;
+			echo "</div>";
+			
+			echo "<div class='col-md-1' id='cpfAluno'>";
+				echo $alunosPermitidos->cpfAluno;
+			echo "</div>";
+	
+			
+	
+		if($contaLinha == 2){
+			echo "<div class='col-md-1'></div> </div>";
+			//echo "</div>";
+			$contaLinha = 1;
+			$contador++;
+		} else {
+			$contaLinha++;
+			$contador++;
+		}
+	
+		}		
+		
+		}
 		echo "<input type='hidden' name='idModeloProva' value='$idModeloProva'/>";
 	   echo "<input type='hidden' name='contador' value='$contador'/>";
 		

@@ -84,14 +84,15 @@
 					Resultados
 					</button> 
 					</form>	 					 
-  					<br/> 
+  					 
   					
-  					<form method='get'>
+  					<form action='alunosPermitidos.php' method='get'>
+  					<input type='hidden' name='idModeloProva' value='$idModeloProva' />
 					<button class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored' id='botaoFuncProf'>
-					Registro de Alunos
+					Alunos Permitidos
 					</button>
 					</form>	
-					<br/>";
+					";
 					
 					echo "
 					<form action='editarProva.php' method='get'>
@@ -99,7 +100,7 @@
 					<button type='submit' class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored' id='botaoFuncProf'>
 					Editar Prova
 					</button>
-					<br/> ";
+					";
 					
 					?>
 					<div align='center'>

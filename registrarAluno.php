@@ -1,3 +1,9 @@
+<?php
+	
+	include "verificaProfessor.php";	
+	
+?>
+
 <html lang="en">
 <head>
   <title>IFSP - SdPO</title>
@@ -35,15 +41,18 @@
 
 <body>
 
-<header>
-		<div>
-			<h1 id="titulo">Sistema de Provas Online</h1>
-		</div>
-</header>
-      
-   
-</div>
+<div id="jumbo" class="jumbotron">
 
+
+	<div class="container">  
+	
+ 	 	<img src="_imagens/logo.png" id="logo" alt="Sistema de Provas Online"/>
+ 	 	<img src="_imagens/logo.png" id="logo-alt" alt="Sistema de Provas Online"/>
+ 	 	
+   </div>
+  
+	
+</div>
 
 <div class="container-fluid">
 	
@@ -86,7 +95,7 @@
 	
 </div>
 
-<footer class="footer"> <br/><p id="txtfooter">2016 - Por Caique Aquino Borges & Vivian Rebeca Brazão</p> </footer>
+<!-- <footer class="footer"> <br/><p id="txtfooter">2016 - Por Caique Aquino Borges & Vivian Rebeca Brazão</p> </footer> -->
 
 </body>
 </html>

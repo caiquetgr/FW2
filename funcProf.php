@@ -65,7 +65,7 @@
 					
 					<form>
   					 
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="botaoFuncProf">
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="botaoFuncProf" formaction="registrarAluno.php">
 					Cadastrar Aluno
 					</button> 	 					 
   					</br> 
