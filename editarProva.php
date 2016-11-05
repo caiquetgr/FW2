@@ -1,13 +1,25 @@
 <?php
-	
+
 	include "verificaProfessor.php";
 	
 	include "conexao.php";	
 	
-	$titulo = $_POST['titulo'];
-	$qntPerg = $_POST['qntPerg'];
-	$inicio = $_POST['inicio'];
-	$fim = $_POST['fim'];
+	$idModeloProva = $_GET['idModeloProva'];
+	
+	
+	//Prova
+	$sql = "SELECT * FROM ModeloProva WHERE idModeloProva=$idModeloProva";
+	
+	$resultado = mysql_query($sql) or die(mysql_error());
+	
+	$ModeloProva = mysql_fetch_object($resultado);	
+	
+	
+	//Perguntas
+	 $sqlPerguntas = "SELECT idPergunta, questaoPergunta from Pergunta WHERE idModeloProva=$idModeloProva";
+	 
+	 $resultadoPerguntas = mysql_query($sqlPerguntas) or die(mysql_error());	 
+	
 ?>
 <html lang="pt">
 <head>
@@ -64,7 +76,7 @@
 			<div style="text-align: center">
 			
 		 <div id='instrucoes'>
-		<h3 id="titulo-conteudo" style="text-align: center">Cadastro de Prova</h3>
+		<h3 id="titulo-conteudo" style="text-align: center">Editar Prova</h3>
 		</div>
 		<br/><br/>
 		<form action="insereProva.php" method="post">
@@ -79,61 +91,88 @@
 			
 			//título da prova
 			echo "<div id='linha-titulo'>";
-			echo "<h5>".$titulo."</h5>";
+			echo "<h5>".$ModeloProva->tituloModeloProva."</h5>";
 			echo "</div><br/>";
-				for($i=1; $i<=$qntPerg; $i++){
+				
+				
+					$i = 1;			
+					
+					$qntdPerg = 0;	
+				
+					while($pergunta = mysql_fetch_object($resultadoPerguntas)){
 					
 					//questão
 					echo "<div class='row' id='linha-questão' style='text-align: center'>";
 					echo "<div class='input-container'>";
 					echo "<label id='questao'>Questão ".$i."</label>";
 					echo "</div>";
-					echo "<textarea class='mdl-textfield__input' type='text' rows='3'  name='perg".$i."' id='pergunta'></textarea>";
+					echo "<textarea class='mdl-textfield__input' type='text' rows='3'  name='perg".$i."' id='pergunta'>$pergunta->questaoPergunta</textarea>";
 					echo "</div>";
 					echo "</br>";
 					
+					$sqlAternativas = "SELECT * FROM Alternativa WHERE idPergunta=$pergunta->idPergunta";
+					
+					$resultadoAlternativas = mysql_query($sqlAternativas) or die(mysql_error());
+					
+					$j = 1;					
+					
+					
+					echo "<label>Alternativas</label></br>";					
+					
+					while($alternativa = mysql_fetch_object($resultadoAlternativas)){					
+					
+					$checkado = $alternativa->respostaAlternativa == 1 ? "checked" : "" ;					
+					
 					//alternativas
 					echo "<div class='row' class='input-container'>";
-					echo "<label>Alternativas</label></br>";
-					echo "<input type='radio' id='op1' name='p".$i."alt' value='1' checked>";
-					echo "<input type='text' name='p".$i."alt1' id='alternativa'>";
+					echo "<input type='radio' id='op1' name='p".$i."alt' value='$alternativa->idAlternativa' $checkado>";
+					echo "<input type='text' name='p".$i."alt$j' id='alternativa' value='$alternativa->alternativa'>";
+					//echo "<label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for='alt1'>";
+					echo "</label>";
+					echo "</div>";
+						
+					$j++;
+					
+					}
+					
+					while($j <= 5){
+					
+					echo "<div class='row' class='input-container'>";
+					echo "<input type='radio' id='op1' name='p".$i."alt'>";
+					echo "<input type='text' name='p".$i."alt$j' id='alternativa'>";
 					//echo "<label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for='alt1'>";
 					echo "</label>";
 					echo "</div>";
 					
-					echo "<div class='row' class='input-container'>";
-					echo "<input type='radio' id='op2' name='p".$i."alt' value='2'>";
-					echo "<input type='text' name='p".$i."alt2' id='alternativa'>";
-					//echo "<label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for='alt2'>";
-					echo "</label>";
-					echo "</div>";
+					$j++;
 					
-					echo "<div class='row' class='input-container'>";
-					echo "<input type='radio' id='op3' name='p".$i."alt' value='3'>";
-					echo "<input type='text' name='p".$i."alt3' id='alternativa'>";
-					//echo "<label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for='alt3'>";
-					echo "</label>";
-					echo "</div>";
+					}
 					
-					echo "<div class='row' class='input-container'>";
-					echo "<input type='radio' id='op4' name='p".$i."alt' value='4'>";
-					echo "<input type='text' name='p".$i."alt4' id='alternativa'>";
-					//echo "<label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for='alt4'>";
-					echo "</label>";
-					echo "</div>";
 					
-					echo "<div class='row' class='input-container'>";
-					echo "<input type='radio' id='op5' name='p".$i."alt' value='5'>";
-					echo "<input type='text' name='p".$i."alt5' id='alternativa'>";
-					//echo "<label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for='alt5'>";
-					echo "</label>";
-					echo "</div><br/><br/><br/>";
+					/*
+						NOTA
+						
+						Pegar por post normalmente essas alternativas, como se fosse insereProva,
+						
+						Select * from Alternativa WHERE idPergunta (Selecionar todas as alternativas daquela
+						pergunta no banco de dados, e também a contagem de quantas tem (count))
+						
+						Ir usando o update, atualizar as que já estão lá, e quando o for com o count acabar,
+						começar a usar o insert into alternativa
+											
+					*/					
 					
-					echo "<input type='hidden' name='titulo' value='$titulo' />";
-					echo "<input type='hidden' name='qntPerg' value='$qntPerg' />";
-					echo "<input type='hidden' name='inicio' value='$inicio' />";
-					echo "<input type='hidden' name='fim' value='$fim' />"; 
+					echo "<br/><br/><br/>";
+		
+					
+					$i++;
+					
+					$qntdPerg++;
 				}
+				
+				
+				echo "<input type='hidden' name='idModeloProva' value='$idModeloProva'/>";				
+				
 			?>
 			
 				<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">

@@ -181,7 +181,14 @@
 		
 		mysql_close();
 		
-		
+			echo "<div class='row'>";
+			
+		   echo "<div class='col-md-12' align='center'>";
+		   echo "<form> <button style='margin-top: 25px;' class='mdl-button mdl-js-button mdl-button--raised
+		     		mdl-js-ripple-effect mdl-button--colored' formaction='javascript:history.back()'>
+					Voltar
+					</button> </form>	";
+         echo "</div>";		
 	?>			
 			
 	

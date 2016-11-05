@@ -74,7 +74,7 @@
 					Lista de provas
 					</button> 	 					 
   					&nbsp;&nbsp;
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="botaoFuncProf" formaction="#" >
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="botaoFuncProf" formaction="ProvasAlunoLista.php" >
 					Provas feitas
 					</button>
 					</br>

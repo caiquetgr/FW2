@@ -1,8 +1,16 @@
 <?php
 	
-	include "verificaProfessor.php";	
+	include "verificaProfessor.php";
 	
-	$idModeloProva = $_GET['idModeloProva'];	
+	include "conexao.php";	
+	
+	$idModeloProva = $_GET['idModeloProva'];
+	
+	$sql = "SELECT tituloModeloProva FROM ModeloProva WHERE idModeloProva = $idModeloProva";
+	
+	$resultado = mysql_query($sql) or die(mysql_error());
+	
+	$ModeloProva = mysql_fetch_object($resultado);	 	
 	
 ?>
 <!DOCTYPE html>
@@ -63,24 +71,43 @@
 			<div class="rectangle">
 			
 					<div id="texto">
-					<h4 id="titulo-conteudo" style="text-align: center">Seja bem vindo(a) Prof. <a style="color: #FF5722"><?php echo strtok($nomeProf,' ')?></a>!
+					<h4 id="titulo-conteudo" style="text-align: center"><a style="color: #FF5722"><?php echo $ModeloProva->tituloModeloProva?></a>
 					<br/>Escolha a funcionalidade que deseja utilizar:</h4>
 					
-					<form>
-  					 
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="botaoFuncProf">
+					
+					
+  					<?php 
+  					
+  					echo " 
+  					<form method='get'>
+					<button class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored' id='botaoFuncProf'>
 					Resultados
-					</button> 	 					 
-  					</br> 
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="botaoFuncProf">
+					</button> 
+					</form>	 					 
+  					<br/> 
+  					
+  					<form method='get'>
+					<button class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored' id='botaoFuncProf'>
 					Registro de Alunos
 					</button>
-					</br>
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" 
-					id="botaoFuncProf" formaction="editarProva.php?idModeloProva=$idModeloProva">
+					</form>	
+					<br/>";
+					
+					echo "
+					<form action='editarProva.php' method='get'>
+					<input type='hidden' name='idModeloProva' value='$idModeloProva' />
+					<button type='submit' class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored' id='botaoFuncProf'>
 					Editar Prova
 					</button>
-					</br>
+					<br/> ";
+					
+					?>
+					<div align='center'>
+		  		   <button style='margin-top: 25px;' class='mdl-button mdl-js-button mdl-button--raised
+		     		mdl-js-ripple-effect mdl-button--colored' formaction='javascript:history.back()'>
+					Voltar
+					</button> 
+      		   </div>
 					
 					</form>
 					
