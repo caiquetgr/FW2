@@ -79,12 +79,13 @@
 		<h3 id="titulo-conteudo" style="text-align: center">Editar Prova</h3>
 		</div>
 		<br/><br/>
-		<form action="insereProva.php" method="post">
+		<form action="atualizaProva.php" method="post">
 			<h4 style="text-align: center">Instruções</h4>
 			
-			<p style="text-align: center">O preenchimento de todos os campos de alternativas <strong>não</strong> é necessário, coloque a quantidade de alternativas que desejar.</br>
-			Para marcar qual é a alternativa correta da questão, basta checar a caixinha que há ao lado da alternativa.</br>
-			Cada questão deverá ter apenas <strong>uma</strong> alternativa correta.</p></br>
+			<p style="text-align: center"> Não altere drasticamente as alternativas, para não prejudicar o entendimento
+			das provas que já foram realizadas. <br/>As notas das provas já realizadas <strong>não</strong> serão alteradas.
+			<br/><br/>Os passos são os mesmo da criação de uma prova: <br/> - Selecione a alternativa que é a resposta; <br/>- Não é necessário
+			o preenchimento das cinco alternativas.  </p><br/>
 				<br/><br/>
 			
 			<?php
@@ -138,7 +139,7 @@
 					while($j <= 5){
 					
 					echo "<div class='row' class='input-container'>";
-					echo "<input type='radio' id='op1' name='p".$i."alt'>";
+					echo "<input type='radio' id='op1' name='p".$i."alt' value='$j'>";
 					echo "<input type='text' name='p".$i."alt$j' id='alternativa'>";
 					//echo "<label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for='alt1'>";
 					echo "</label>";
