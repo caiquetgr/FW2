@@ -1,5 +1,9 @@
 <?php
+
 	include "verificaProfessor.php";
+	
+
+	
 ?>
 
 <!DOCTYPE html>
@@ -39,6 +43,7 @@
 
 <div id="jumbo" class="jumbotron">
 
+<?php include "botaoSair.php"; ?>
 
 	<div class="container">  
 	
@@ -52,6 +57,8 @@
 
 
 <div class="container-fluid">
+
+	
 	
 	<div class="row" id="centro">
 	
@@ -94,8 +101,4 @@
 
 
 </body>
-</html>
-	
-</body>
-
 </html>

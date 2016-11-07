@@ -79,6 +79,8 @@
 
 <div id="jumbo" class="jumbotron">
 
+<?php include "botaoSair.php"; ?>
+
 	<div class="container">  
 	
  	 	<img src="_imagens/logo.png" id="logo" alt="Sistema de Provas Online"/>

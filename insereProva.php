@@ -70,6 +70,6 @@
 	mysql_close();
 	
 	echo "<script> alert('Prova registrada com sucesso!!');";
-	echo "javascript:window.location='alunosPermitidos.php?id=$idModeloProva'; </script>";	
+	echo "javascript:window.location='alunosPermitidos.php?idModeloProva=$idModeloProva'; </script>";	
 
 ?>

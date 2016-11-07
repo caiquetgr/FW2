@@ -66,6 +66,8 @@
 
 <div id="jumbo" class="jumbotron">
 
+<?php include "botaoSair.php"; ?>
+
 	<div class="container">  
 	
  	 	<img src="_imagens/logo.png" id="logo" alt="Sistema de Provas Online"/>
@@ -220,7 +222,7 @@
 			<div class='col-md-12' align='center'>
 			
 			<button style="margin-top: 20px;" class="mdl-button mdl-js-button mdl-button--raised
-			 mdl-js-ripple-effect mdl-button--colored" formaction="#">
+			 mdl-js-ripple-effect mdl-button--colored" formaction='javascript:history.back()'>
 					Voltar
 			</button>			
 			&nbsp;

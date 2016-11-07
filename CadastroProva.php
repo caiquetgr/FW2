@@ -70,6 +70,8 @@ $("#data").datepicker({dateFormat: "dd/mm/yy", changeYear: true, changeMonth: tr
 
 <div id="jumbo" class="jumbotron">
 
+<?php include "botaoSair.php"; ?>
+
 	<div class="container">  
 	
  	 	<img src="_imagens/logo.png" id="logo" alt="Sistema de Provas Online"/>
