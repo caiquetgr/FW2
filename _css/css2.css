@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body{
+	background: #C5CAE9;
+	margin-bottom: 60px;
+}
+
+img#logo{
+	max-width: 100%;
+}
+
+img#logo-alt{
+	max-width: 80%;
+	display: none;
+}
+
+.footer {
+  margin-top: 3%;
+  position: absolute;  
+  display: block;
+  width: 100%;
+  height: 55px;
+  background-color: #000040;
+  text-align: center;
+  text-indent: auto;
+  bottom: 0;
+  
+}
+
+.footer p{
+	margin: auto;
+	color: #FFFFFF;
+	opacity: 70%;
+}
+
+header {
+	text-align: center;
+	background-color: #000040;
+	padding: 1.3em;
+	font-family: 'Roboto', sans-serif;
+	color: #FFFFFF;
+}
+
+.rectangle { 
+  width: 100%; 
+  height: 0;
+  padding-bottom: 55%; 
+  background: #FFFFFF; 
+  border-radius: 7px;
+}
+
+div#texto{
+	text-align: center;
+	display:block;
+	padding-top: 5%;
+	padding-bottom: -5%;
+	font-family: 'Roboto', sans-serif;
+}
+
+.col-md-6{
+	padding-top: 2%;
+	padding-bottom: 2%;
+	height: 100%;
+}
+
+.img-responsive {
+	width: 27%;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 6px;
+	display: inline;
+	
+}
+
+.img-responsive:hover{
+	border-color: #000000; 	
+}
+
+.p-imagem{
+	
+	text-align: center;
+	display: block;
+}
+
+#botao, #botaoFuncProf{
+	display: inline-block;
+	margin-top: 2%;
+	margin-right: 1%;
+	margin-left: 6%;
+	color: #FFFFFF;
+	opacity: 70%;
+	background-color: #FF3D00;
+}
+
+#home{
+	display: inline-block;
+	margin-right: 1%;
+	margin-left: 6%;
+	color: #FFFFFF;
+	opacity: 70%;
+	background-color: #FF3D00;
+}
+
+div#login{
+	display: inline-block;
+	margin-bottom: -20px;
+}
+/*
+#botaoFuncProf{
+	margin-top: 2%;
+	display: inline-block;
+	text-align: center;
+	color: #FFFFFF;
+	opacity: 70%;
+	background-color: #FF3D00;
+}
+*/
+div#perguntasCadastroProva{
+	margin-top: 2;
+	text-align: left;
+	margin-left: 30%;
+}
+
+input#qntPerg {
+	width: 50px;
+	display: inline-block;
+	text-align: left;
+}
+
+input#titulo{
+	width: 40%;
+	display: inline-block;
+	
+}
+
+ input#data, input#dataF {
+	width: 30%;
+	display: inline-block;
+ }
+ 

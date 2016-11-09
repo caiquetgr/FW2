@@ -15,7 +15,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="_css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="_css/index.css">
+  <link rel="stylesheet" type="text/css" href="_css/css2.css">
+  <link rel = " stylesheet " href = " https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium & amp; lang = en " >
   <link rel="stylesheet" type="text/css" href="_css/CadastroProva2.css">
   <link rel="stylesheet" href="_css/material.min.css">
   <script src="_js/material.min.js"></script>
@@ -40,21 +41,14 @@
 
 <body>
 
+<header>
 
+<?php include "botaoSair.php"; ?>
 
-<div id="jumbo" class="jumbotron">
-	
-	<?php include "botaoSair.php"; ?>
-
-	<div class="container">  
-	
- 	 	<img src="_imagens/logo.png" id="logo" alt="Sistema de Provas Online"/>
- 	 	<img src="_imagens/logo.png" id="logo-alt" alt="Sistema de Provas Online"/>
- 	 	
-   </div>
-   
-</div>
-
+		<div>
+			<h1 id="titulo">Sistema de Provas Online</h1>
+		</div>
+</header>
 
 <div class="col-md-2"></div>
 <div class="col-md-8">

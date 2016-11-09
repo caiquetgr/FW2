@@ -13,7 +13,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="_css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="_css/index.css">
+  <link rel="stylesheet" type="text/css" href="_css/css2.css">
+  <link rel = " stylesheet " href = " https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium & amp; lang = en " >
   <link href = "https://fonts.googleapis.com/css?family= Roboto " rel = "stylesheet">
   <link rel="stylesheet" href="_css/material.min.css">
   <script src="_js/material.min.js"></script>
@@ -41,19 +42,14 @@
 
 <body>
 
-<div id="jumbo" class="jumbotron">
+<header>
 
 <?php include "botaoSair.php"; ?>
 
-	<div class="container">  
-	
- 	 	<img src="_imagens/logo.png" id="logo" alt="Sistema de Provas Online"/>
- 	 	<img src="_imagens/logo.png" id="logo-alt" alt="Sistema de Provas Online"/>
- 	 	
-   </div>
-  
-	
-</div>
+		<div>
+			<h1 id="titulo">Sistema de Provas Online</h1>
+		</div>
+</header>
 
 
 <div class="container-fluid">
@@ -72,15 +68,15 @@
 					
 					<form>
   					 
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="botaoFuncProf" formaction="registrarAluno.php">
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="botaoFuncProf" formaction="registrarAluno.php">
 					Cadastrar Aluno
 					</button> 	 					 
   					</br> 
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="botaoFuncProf" formaction="CadastroProva.php" >
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="botaoFuncProf" formaction="CadastroProva.php" >
 					Cadastrar Prova
 					</button>
 					</br>
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="botaoFuncProf" formaction="ProvasProfLista.php">
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="botaoFuncProf" formaction="ProvasProfLista.php">
 					Listar Provas
 					</button>
 					

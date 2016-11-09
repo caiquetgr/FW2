@@ -2,8 +2,8 @@
 
 #botaosair{
 	
-	color: black;
-	background-color: #FFB74D;
+	color: #FFFFFF;
+	background-color: #FF3D00;
 	padding: 3px 10px 3px 10px;
 	border: 1px solid;
 	border-radius: 7px;
