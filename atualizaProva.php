@@ -8,6 +8,7 @@
 	
 	$i = 1;	 
 	
+		
 		//Perguntas
 	 $sqlPerguntas = "SELECT idPergunta, questaoPergunta from Pergunta WHERE idModeloProva=$idModeloProva";
 	 
@@ -17,9 +18,9 @@
 	 
 	 while ( $pergunta = mysql_fetch_object($resultadoPerguntas) ){
 	 	
-	 $perguntaForm = $_POST['perg'.$i.''];
+	 $perguntaForm = addslashes($_POST['perg'.$i.'']);
 	 
-	 echo "<script> alert('$perguntaForm'); </script>";
+	 
 	 
 	 $sqlAtualizaPerg = "UPDATE Pergunta SET questaoPergunta='$perguntaForm' WHERE idPergunta=$pergunta->idPergunta";
 	 mysql_query($sqlAtualizaPerg) or die(mysql_error());	 
@@ -38,7 +39,7 @@
 	 
 	 	while( $alternativa = mysql_fetch_object($resultadoAlternativas) ){
 	 	
-		      $alt = $_POST['p'.$i.'alt'.$j.''];
+		      $alt = addslashes($_POST['p'.$i.'alt'.$j.'']);
 		
 				$resposta = $_POST['p'.$i.'alt'];
 		
@@ -68,7 +69,7 @@
 	  
 	  while ( $j <= 5 ){
 	  
-				$alt = $_POST['p'.$i.'alt'.$j.''];
+				$alt = addslashes($_POST['p'.$i.'alt'.$j.'']);
 		
 				$resposta = $_POST['p'.$i.'alt'];
 		

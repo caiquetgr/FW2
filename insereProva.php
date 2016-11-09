@@ -4,7 +4,7 @@
 	
 	include "conexao.php";
 	
-	$titulo = $_POST['titulo'];
+	$titulo = addslashes($_POST['titulo']);
 	$qntdPerg = $_POST['qntPerg'];
 	$dataInicio = $_POST['inicio'];
 	$dataFim = $_POST['fim'];
@@ -27,7 +27,7 @@
 	//Percorrendo cada pergunta
 	for($i = 1; $i <= $qntdPerg; $i++){
 		
-		$pergunta = $_POST['perg'.$i.''];
+		$pergunta = addslashes($_POST['perg'.$i.'']);
 		
 		$sqlPergunta = "INSERT INTO Pergunta values (DEFAULT, '$pergunta', $idModeloProva)";
 		
@@ -38,7 +38,7 @@
 			//Percorrendo cada alternativa da pergunta número $i
 			for($j = 1; $j <= 5; $j++){
 		
-				$alt = $_POST['p'.$i.'alt'.$j.''];
+				$alt = addslashes($_POST['p'.$i.'alt'.$j.'']);
 		
 				$resposta = $_POST['p'.$i.'alt'];
 		
