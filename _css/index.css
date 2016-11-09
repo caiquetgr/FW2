@@ -6,7 +6,7 @@ html {
 }
 
 body{
-	background: #BBDEFB;
+	background: #C5CAE9;
 	margin-bottom: 60px;
 }
 
@@ -25,7 +25,7 @@ img#logo-alt{
   display: block;
   width: 100%;
   height: 55px;
-  background-color: #42A5F5;
+  background-color: #000040;
   text-align: center;
   text-indent: auto;
   bottom: 0;
@@ -40,7 +40,7 @@ img#logo-alt{
 
 .jumbotron{
 	text-align: center;
-	background-color: #2196F3;
+	background-color: #000040;
 	padding: 1.3em;
 	font-family: 'Roboto', sans-serif;
 	color: #FFFFFF;
@@ -87,23 +87,36 @@ div#texto{
 	display: block;
 }
 
-input#botao{
+#botao, #botaoFuncProf{
+	display: inline-block;
+	margin-top: 2%;
+	margin-right: 1%;
+	margin-left: 6%;
+	color: #FFFFFF;
+	opacity: 70%;
+	background-color: #FF3D00;
+}
+
+#home{
 	display: inline-block;
 	margin-right: 1%;
 	margin-left: 6%;
+	color: #FFFFFF;
+	opacity: 70%;
+	background-color: #FF3D00;
 }
 
 div#login{
 	display: inline-block;
 	margin-bottom: -20px;
 }
-
+/*
 button#botaoFuncProf{
 	margin-top: 2%;
 	display: inline-block;
 	text-align: center;
 }
-
+*/
 div#perguntasCadastroProva{
 	margin-top: 2;
 	text-align: left;
