@@ -24,8 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="stylesheet" type="text/css" href="_css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="_css/css2.css">
-  <link rel = " stylesheet " href = " https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium & amp; lang = en " >
+  <link rel="stylesheet" type="text/css" href="_css/index.css">
   <link rel="stylesheet" href="_css/material.min.css">
   <link rel="stylesheet" type="text/css" href="_css/listaProvas.css" />
   <link rel="stylesheet" type="text/css" href="_css/jquery-ui.css">
@@ -87,14 +86,18 @@ $(document).ready(function(){
 
 <body>
 
-<header>
+<div id="jumbo" class="jumbotron">
 
 <?php include "botaoSair.php"; ?>
 
-		<div>
-			<h1 id="titulo">Sistema de Provas Online</h1>
-		</div>
-</header>
+	<div class="container">  
+	
+ 	 	<img src="_imagens/logo.png" id="logo" alt="Sistema de Provas Online"/>
+ 	 	<img src="_imagens/logo.png" id="logo-alt" alt="Sistema de Provas Online"/>
+ 	 	
+   </div>
+	
+</div>
 
 <style>
 
@@ -166,13 +169,13 @@ $(document).ready(function(){
 		echo $estatisticas->quantidadeDeProvas;  echo "</div>";
 		 
 		echo "<div class='col-md-1' id='estatistica-linha' style='background-color: #90caf9; font-weight: bold;'>"; 
-		echo $estatisticas->minima; echo "</div>";
+		echo number_format($estatisticas->minima, 1); echo "</div>";
 		
 		echo "<div class='col-md-1' id='estatistica-linha' style='background-color: #90caf9; font-weight: bold;'>";
 		 echo number_format($estatisticas->media, 1); echo "</div>";
 		 
 		echo "<div class='col-md-1' id='estatistica-linha' style='background-color: #90caf9; font-weight: bold;'>";
-		 echo $estatisticas->maxima; echo "</div>";
+		 echo number_format($estatisticas->maxima, 1); echo "</div>";
 		 
 		echo "<div class='col-md-4'></div>";
 	
