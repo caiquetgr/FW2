@@ -216,7 +216,7 @@
 		} else {
 		  
 		  
-		  echo "<form> <button style='margin-top: 25px;' class='mdl-button mdl-js-button mdl-button--raised
+		  echo "<form> <button id='home' style='margin-top: 25px;' class='mdl-button mdl-js-button mdl-button--raised
 		     		mdl-js-ripple-effect mdl-button--colored' formaction='javascript:history.back()'>
 					Voltar
 					</button> </form>";

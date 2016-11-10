@@ -79,17 +79,19 @@
 	<?php
 	
 		//Cabeçalho
-			echo "<div class='row' style='background-color: #FF9800; font-weight: bold;'>";
-				echo "<div class='col-md-12' id='topo'>"; echo "Provas no Sistema - ".date('d/m/Y'); echo "</div>";	
+			echo "<div class='row' font-weight: bold;'>";
+				echo "<div class='col-md-1'></div>";				
+				echo "<div class='col-md-10' id='topo'>"; echo "Provas no Sistema - ".date('d/m/Y'); echo "</div>";
+				echo "<div class='col-md-1'></div>";	
 			echo "</div>";
 			
-			echo "<div class='row' style='background-color: #FF9800; font-weight: bold;'>";
+			echo "<div class='row'>";
 				 echo "<div class='col-md-1'></div>";
-				 echo "<div class='col-md-2' style='border-left: 1px solid black'>"; echo "Nome da prova"; 			  echo "</div>";
-				 echo "<div class='col-md-2'>"; echo "Data de início da prova";  echo "</div>";
-				 echo "<div class='col-md-2'>"; echo "Data de término da prova"; echo "</div>";
-				 echo "<div class='col-md-2'>"; echo "Disponibilidade da prova"; echo "</div>";
-				 echo "<div class='col-md-2'>"; echo "Função"; echo "</div>";
+				 echo "<div class='col-md-2' id='linha-topo' style='border-left: 1px solid black'>"; echo "Nome da prova"; 			  echo "</div>";
+				 echo "<div class='col-md-2' id='linha-topo'>"; echo "Data de início da prova";  echo "</div>";
+				 echo "<div class='col-md-2' id='linha-topo'>"; echo "Data de término da prova"; echo "</div>";
+				 echo "<div class='col-md-2' id='linha-topo'>"; echo "Disponibilidade da prova"; echo "</div>";
+				 echo "<div class='col-md-2' id='linha-topo'>"; echo "Função"; echo "</div>";
 				 echo "<div class='col-md-1'></div>";
 			echo "</div>";	 
 			
@@ -126,24 +128,24 @@
 				
 			
 			//Imprimindo a linha
-			echo "<div class='row' id='cor$cor'>";
+			echo "<div class='row'>";
 		
 				 echo "<div class='col-md-1'></div>";
 				 
-				 echo "<div class='col-md-2' style='border-left: 1px solid black'>";
+				 echo "<div class='col-md-2' id='cor$cor' style='border-left: 1px solid black'>";
 				 echo $registro->tituloModeloProva;
 				 echo "</div>";
 				 
-				 echo "<div class='col-md-2'>";
+				 echo "<div class='col-md-2'  id='cor$cor'>";
 				 echo date_format($dataInicio, 'd/m/Y');	
 				 echo "</div>";	
 				 
-				 echo "<div class='col-md-2' id='datafim'>";
+				 echo "<div class='col-md-2'  id='cor$cor' id='datafim'>";
 				 echo date_format($datafim, 'd/m/Y');	
 				 echo "</div>";	
 				 
 				 	
-				 echo "<div class='col-md-2'>";
+				 echo "<div class='col-md-2'  id='cor$cor'>";
 				     
 				 
 				 		//Testando as datas, imprimindo a situação (Aberta/Fechada/Aguarde) dependendo da data atual
@@ -160,7 +162,7 @@
 				 
 				 echo "</div>";	
 				 
-				 echo "<div class='col-md-2'>";
+				 echo "<div class='col-md-2'  id='cor$cor'>";
 				 
 				 if($botao == true)
 				  		echo "<a href='ProvasMenu.php?idModeloProva=$registro->idModeloProva'><span id='botao'>Selecionar</span></a>";
@@ -182,7 +184,7 @@
 		echo "<div class='row'>";
 			
 		   echo "<div class='col-md-12' align='center'>";
-		   echo "<form> <button style='margin-top: 25px;' class='mdl-button mdl-js-button mdl-button--raised
+		   echo "<form> <button id='botaoFuncProf' style='margin-top: 25px;' class='mdl-button mdl-js-button mdl-button--raised
 		     		mdl-js-ripple-effect mdl-button--colored' formaction='javascript:history.back()'>
 					Voltar
 					</button> </form>	";

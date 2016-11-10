@@ -2,7 +2,7 @@
 
 .jumbotron{
 	text-align: center;
-	background-color: #2196F3;
+	background-color: #00838f;
 	padding: 0.2em;
 	font-family: 'Roboto', sans-serif;
 	color: #FFFFFF;
@@ -27,11 +27,19 @@ div#topo{
 	border-right: 1px solid black;
 	border-bottom: 1px solid black;
 	border-top: 1px solid black;
+	border-left: 1px solid black;
 	font-size: 20px;
+	background-color: #4db6ac;
+	font-weight: bold;
+}
+
+div#linha-topo{
+	background-color: #80cbc4;
+	font-weight: bold;
 }
 
 #cor0{
-	background-color: #90caf9;
+	background-color: #b2dfd8;
 }
 
 #cor1{
@@ -49,19 +57,17 @@ a:link{
 }
 
 #botao{
-	
 	color: black;
 	background-color: lightgreen;
 	padding: 3px 4px 3px 4px;
 	border: 1px solid;
 	border-radius: 7px;
 	text-decoration: none;
-	
 	box-shadow: 1px 1px 5px black;
 }
 
 #botao:hover{
-	background-color: yellow;
+	background-color: #b2ebf2;
 	font-weight: bold;
 	text-decoration: none;
 }

@@ -42,11 +42,13 @@
 		
 				$resposta = $_POST['p'.$i.'alt'];
 		
+			
 				//Se resposta não estiver em branco
 				if( strcmp($alt, '') != 0 ){
 					//Se resposta for marcada como correta, coloca valor 1 (true) no banco, se não coloca 0 (false)
 					if( strcmp($resposta, "$j") == 0 ){
 						//Resposta correta!
+						//A alternativa que foi marcada como
 						$sqlAlt = "INSERT INTO Alternativa values (DEFAULT, '$alt', 1, $idPergunta)";
 						mysql_query($sqlAlt) or die(mysql_error());
 					} else {

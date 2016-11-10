@@ -137,7 +137,7 @@ $("#data").datepicker({dateFormat: "dd/mm/yy", changeYear: true, changeMonth: tr
 		<div class="row" id="centro" >	
 			<div class='col-md-2'></div>				
 				<div class='col-md-8' align='center'>					
-					<button style="margin-top: 25px;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+					<button id='home' style="margin-top: 25px; margin-bottom: 25px;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
 					Próxima
 					</button>
 				</div>

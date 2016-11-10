@@ -6,9 +6,9 @@
 	
 	header('Content-Type: text/html; charset=UTF-8');	
 	
-	$sql = "SELECT p.idProvaAluno, p.notaProvaAluno, p.idModeloProva, m.tituloModeloProva, P.nomeProfessor
+	$sql = "SELECT p.idProvaAluno, p.notaProvaAluno, p.idModeloProva, m.tituloModeloProva, R.nomeProfessor
 	FROM ProvaAluno as p JOIN ModeloProva as m ON p.idModeloProva = m.idModeloProva JOIN
-	Professor as P ON m.cpfProfessor = P.cpfProfessor WHERE p.cpfAluno = $cpfAluno";
+	Professor as R ON m.cpfProfessor = R.cpfProfessor WHERE p.cpfAluno = $cpfAluno";
 	
    $resultado = mysql_query($sql) or die(mysql_error());	
    
@@ -78,17 +78,19 @@
 	<?php
 	
 		//Cabeçalho
-			echo "<div class='row' style='background-color: #FF9800; font-weight: bold;'>";
-				echo "<div class='col-md-12' id='topo'>"; echo "Provas no Sistema - ".date('d/m/Y'); echo "</div>";	
+			echo "<div class='row' >";
+			   echo "<div class='col-md-1'></div>";
+				echo "<div class='col-md-10' id='topo'>"; echo "Provas no Sistema - ".date('d/m/Y'); echo "</div>";
+				echo "<div class='col-md-1'></div>";	
 			echo "</div>";
 			
-			echo "<div class='row' style='background-color: #FF9800; font-weight: bold;'>";
+			echo "<div class='row' >";
 				 echo "<div class='col-md-1'></div>";
-				 echo "<div class='col-md-2' style='border-left: 1px solid black'>"; echo "ID da Prova"; echo "</div>";
-				 echo "<div class='col-md-2'>"; echo "Título da Prova";  echo "</div>";
-				 echo "<div class='col-md-2'>"; echo "Professor"; echo "</div>";
-				 echo "<div class='col-md-2'>"; echo "Nota"; echo "</div>";
-				 echo "<div class='col-md-2'>"; echo "Ver prova"; echo "</div>";
+				 echo "<div class='col-md-2' id='linha-topo' style='border-left: 1px solid black'>"; echo "ID da Prova"; echo "</div>";
+				 echo "<div class='col-md-2' id='linha-topo'>"; echo "Título da Prova";  echo "</div>";
+				 echo "<div class='col-md-2' id='linha-topo'>"; echo "Professor"; echo "</div>";
+				 echo "<div class='col-md-2' id='linha-topo'>"; echo "Nota"; echo "</div>";
+				 echo "<div class='col-md-2' id='linha-topo'>"; echo "Ver prova"; echo "</div>";
 				 echo "<div class='col-md-1'></div>";
 			echo "</div>";	 
 			
@@ -114,29 +116,29 @@
 				$corNota = '#388E3C';		
 						
 			//Imprimindo a linha
-			echo "<div class='row' id='cor$cor'>";
+			echo "<div class='row' >";
 		
 				 echo "<div class='col-md-1'></div>";
 				 
-				 echo "<div class='col-md-2' style='border-left: 1px solid black'>";
+				 echo "<div class='col-md-2' id='cor$cor' style='border-left: 1px solid black'>";
 				 echo $registro->idProvaAluno;
 				 echo "</div>";
 				 
-				 echo "<div class='col-md-2'>";
+				 echo "<div class='col-md-2' id='cor$cor'>";
 				 echo $registro->tituloModeloProva;	
 				 echo "</div>";	
 				 
-				 echo "<div class='col-md-2'>";
+				 echo "<div class='col-md-2' id='cor$cor'>";
 				 echo $registro->nomeProfessor;	
 				 echo "</div>";	
 				 
 				 	
-				 echo "<div class='col-md-2' style='color: $corNota'>";
+				 echo "<div class='col-md-2' id='cor$cor' style='color: $corNota'>";
 				 echo "<strong style='font-size: 16px;'>".$registro->notaProvaAluno."</strong>";				 						 
 				 echo "</div>";	
 				 
-				 echo "<div class='col-md-2'>";
-				 echo "<a href='resultadoIndividual.php?idProvaAluno=$registro->idProvaAluno'><span id='botao'>Visualizar</span></a>";
+				 echo "<div class='col-md-2' id='cor$cor'>";
+				 echo "<a href='resultadoIndividual.php?idProvaAluno=$registro->idProvaAluno'><span id='botao' background-color: #00bcd4; >Visualizar</span></a>";
 				 echo "</div>";
 				 
 				 echo "<div class='col-md-1'></div>";
@@ -151,7 +153,7 @@
 			echo "<div class='row'>";
 			
 		   echo "<div class='col-md-12' align='center'>";
-		   echo "<form> <button style='margin-top: 25px;' class='mdl-button mdl-js-button mdl-button--raised
+		   echo "<form> <button id='home' style='margin-top: 25px;' class='mdl-button mdl-js-button mdl-button--raised
 		     		mdl-js-ripple-effect mdl-button--colored' formaction='javascript:history.back()'>
 					Voltar
 					</button> </form>	";

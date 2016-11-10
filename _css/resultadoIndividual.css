@@ -2,18 +2,16 @@
 
 .jumbotron{
 	text-align: center;
-	background-color: #2196F3;
+	background-color: #00838f;
 	padding: 0.1em;
 	font-family: 'Roboto', sans-serif;
 	color: #FFFFFF;
 }
 
-body{
-	background-color: #B3E5FC;
-}
+
 
 #titulo-resultado{
-	background-color: #FFB74D;
+	background-color: #4db6ac;
 	border: 1px solid black;
 	border-radius: 8px;
 	box-shadow: 1px 1px 5px black;
@@ -25,9 +23,9 @@ body{
 #headerProva{
 	font-size: 20px;
 	padding: 10px;
-	background-color: #F9A825;
+	background-color: #80cbc4;
 	letter-spacing: 0.5px;
-	border: 1px solid black;
+	border: 1px solid #424242;
 	border-radius: 8px;
 	text-align: center;
 }
@@ -42,7 +40,7 @@ body{
 }
 
 #pergunta{
-	background-color: #FFB74D;
+	background-color: #b2dfdb;
 	padding: 5px;
 	border: 1px solid black;
 	border-radius: 8px;

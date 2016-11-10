@@ -3,7 +3,7 @@
 #botaosair{
 	
 	color: black;
-	background-color: #FFB74D;
+	background-color: #00bcd4;
 	padding: 3px 10px 3px 10px;
 	border: 1px solid;
 	border-radius: 7px;
@@ -14,7 +14,7 @@
 }
 
 #botaosair:hover{
-	background-color: yellow;
+	background-color: #80deea;
 	font-weight: bold;
 	text-decoration: none;
 }

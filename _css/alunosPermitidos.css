@@ -2,7 +2,7 @@
 
 .jumbotron{
 	text-align: center;
-	background-color: #2196F3;
+	background-color: #00838f;
 	padding: 0.2em;
 	font-family: 'Roboto', sans-serif;
 	color: #FFFFFF;
@@ -25,7 +25,7 @@ div#topo{
 	border-top: 1px solid black;
 	border-left: 1px solid black;
 	font-size: 20px;
-	background-color: #FF9800;
+	background-color: #4db6ac;
 	font-weight: bold;
 	text-align: center;
 	color: black;
@@ -36,12 +36,8 @@ div#topo{
 #checkbox{
 	border-left: 1px solid black;
 	border-bottom: 1px solid black;
-	
 	text-align: center;
-	
-	
-	
-	background-color: #80D8FF;
+	background-color: #b2dfd8;
 	max-height: 25px;
 	padding: 2px 0 2.5px 0;
 }
@@ -50,8 +46,9 @@ div#topo{
 	text-align: center;
 	border-left: 1px solid black;
 	border-bottom: 1px solid black;
-	background-color: #40C4FF;
+	background-color: #80cbc4;
 	padding: 2px 0 2px 0;
+	font-weight: bold;
 }
 
 #cpfAluno{
@@ -59,7 +56,8 @@ div#topo{
 	border-left: 1px solid black;
 	border-bottom: 1px solid black;
 	border-right: 1px solid black;
-	background-color: #90caf9;
+	background-color: #b2dfdb;
 	letter-spacing: 0.5px;
 	padding: 2px 0 2px 0;
+	font-weight: bold;
 }

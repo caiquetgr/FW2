@@ -93,7 +93,7 @@
 			
 			//título da prova
 			echo "<div id='linha-titulo'>";
-			echo "<h5>".$ModeloProva->tituloModeloProva."</h5>";
+			echo "<h5 style='font-weight: bold;'>".$ModeloProva->tituloModeloProva."</h5>";
 			echo "</div><br/>";
 				
 				
@@ -172,12 +172,14 @@
 					$qntdPerg++;
 				}
 				
+				echo "
+				<input type='hidden' value='$qntdPerg' id='qntdPerg'/>";
 				
 				echo "<input type='hidden' name='idModeloProva' value='$idModeloProva'/>";				
 				
 			?>
 			
-				<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+				<button id='home' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
 					Finalizar
 				</button>
 				
@@ -188,6 +190,7 @@
 	</div>
 </div>
 <div class="col-md-2"></div>
+
 
 </body>
 </html>

@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="_css/material.min.css">
   <script src="_js/material.min.js"></script>
   <script src="_js/bootstrap.min.js"></script>
+  <script src="_js/spdo.js"></script>
   
   <script type="text/javascript">
   window.onload = function mudaH4(){
@@ -66,7 +67,7 @@
 					<div id="texto">
 					<h4 id="titulo-conteudo" style="text-align: center">Preencha o formulário com os dados do aluno:</h4><br/>
 					
-					<form action="insereAluno.php" method="post">
+					<form onsubmit="return validaRegistraAluno()" action="insereAluno.php" method="post">
 					
 						<div class="mdl-textfield mdl-js-textfield">
 							<input class="mdl-textfield__input" type="text" name="nomeAluno" id="nomeAluno">
@@ -74,8 +75,9 @@
 						</div>
 						<br/>
 						<div class="mdl-textfield mdl-js-textfield">
-							<input class="mdl-textfield__input" type="text" name="cpfAluno" id="cpfAluno">
+							<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="cpfAluno" id="cpfAluno">
 							<label class="mdl-textfield__label" for="sample1">CPF</label>
+							<span class="mdl-textfield__error">Insira apenas números, sem pontuação!</span>
 						</div>
  					  					
 						<div>

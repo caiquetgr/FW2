@@ -79,11 +79,11 @@
 	<?php
 	
 		//Cabeçalho
-			echo "<div class='row' style='background-color: #FF9800; font-weight: bold;'>";
+			echo "<div class='row' >";
 				echo "<div class='col-md-12' id='topo'>"; echo "Provas no Sistema - ".date('d/m/Y'); echo "</div>";	
 			echo "</div>";
 			
-			echo "<div class='row' style='background-color: #FF9800; font-weight: bold;'>";
+			echo "<div class='row' id='linha-topo'>";
 				 echo "<div class='col-md-2'>"; echo "Nome da prova"; 			  echo "</div>";
 				 echo "<div class='col-md-2'>"; echo "Nome do professor"; 		  echo "</div>";
 				 echo "<div class='col-md-2'>"; echo "Data de início da prova";  echo "</div>";
@@ -186,7 +186,7 @@
 			echo "<div class='row'>";
 			
 		   echo "<div class='col-md-12' align='center'>";
-		   echo "<form> <button style='margin-top: 25px;' class='mdl-button mdl-js-button mdl-button--raised
+		   echo "<form> <button id='home' style='margin-top: 25px;' class='mdl-button mdl-js-button mdl-button--raised
 		     		mdl-js-ripple-effect mdl-button--colored' formaction='javascript:history.back()'>
 					Voltar
 					</button> </form>	";

@@ -9,7 +9,9 @@
 	$inicio = $_POST['inicio'];
 	$fim = $_POST['fim'];
 ?>
-<html lang="pt">
+
+
+<html>
 <head>
   <title>IFSP - SdPO</title>
   <meta charset="utf-8">
@@ -36,6 +38,45 @@
 	}
   </script>
   
+  
+  <?php	
+echo "
+<script type='text/javascript'>
+
+	function respostaBranco() {
+		";
+		
+		$cP = 1; //contaPerguntas
+		$cA = 1; //contaAlternativas
+		
+		for($cP = 1; $cP <= $qntPerg; $cP++){
+				
+		 	for($cA = 1; $cA <= 5; $cA++ ){
+		echo"
+		   
+		  		
+			if(document.getElementsByName('p".$cP."alt')[0].value == $cA
+								 &&
+			   document.getElementsByName('p".$cP."alt".$cA."')[0].value == '' ){
+			 	
+					alert('A resposta da alternativa $cP está vazia!');
+					document.getElementsByName('p".$cP."alt".$cA."')[0].focus();
+					return false;
+			}			
+		";
+		  }
+		
+		}
+		
+		
+echo "}
+
+</script>
+
+";
+
+?>
+  
 </head>
 
 <body>
@@ -55,6 +96,7 @@
    
 </div>
 
+<!-- action="insereProva.php" -->
 
 <div class="col-md-2"></div>
 <div class="col-md-8">
@@ -68,7 +110,7 @@
 		<h3 id="titulo-conteudo" style="text-align: center">Cadastro de Prova</h3>
 		</div>
 		<br/><br/>
-		<form action="insereProva.php" method="post">
+		<form onsubmit="return respostaBranco()" action="#"  method="post">
 			<h4 style="text-align: center">Instruções</h4>
 			
 			<p style="text-align: center">O preenchimento de todos os campos de alternativas <strong>não</strong> é necessário, coloque a quantidade de alternativas que desejar.</br>
@@ -137,7 +179,7 @@
 				}
 			?>
 			
-				<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+				<button id='home' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
 					Finalizar
 				</button>
 				
@@ -148,6 +190,10 @@
 	</div>
 </div>
 <div class="col-md-2"></div>
+
+
+
+
 
 </body>
 </html>

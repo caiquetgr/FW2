@@ -108,6 +108,8 @@ $(document).ready(function(){
 	
 	#estatistica-linha{
 		border: 1px solid black;	
+		background-color: #4db6ac;
+		font-weight: bold;
 	}
 	
 	#imagem-grafico{
@@ -117,7 +119,14 @@ $(document).ready(function(){
 	
 	#relatorio{
 		display: block;
-		margin: 0 auto;	
+		margin: 0 auto;
+		background-color: #00acc1;
+		opacity: 70%;	
+	}
+	
+	#estatistica-linha-num{
+		background-color: #b2dfd8;
+		border: 1px solid black;
 	}
 	
 </style>
@@ -146,16 +155,16 @@ $(document).ready(function(){
 		echo "<div class='row' >";	   
 	   echo "<div class='col-md-4'></div>";
 	   
-		echo "<div class='col-md-1' id='estatistica-linha' style='background-color: #FF9800; font-weight: bold;'>";
-		echo "Quantidade de Provas";  echo "</div>";
+		echo "<div class='col-md-1' id='estatistica-linha' >";
+		echo "Nº de Provas";  echo "</div>";
 		 
-		echo "<div class='col-md-1' id='estatistica-linha' style='background-color: #FF9800; font-weight: bold;'>"; 
+		echo "<div class='col-md-1' id='estatistica-linha' >"; 
 		echo "Nota mínima"; echo "</div>";
 		
-		echo "<div class='col-md-1' id='estatistica-linha' style='background-color: #FF9800; font-weight: bold;'>";
-		 echo "Média das notas"; echo "</div>";
+		echo "<div class='col-md-1' id='estatistica-linha' >";
+		 echo "Média"; echo "</div>";
 		 
-		echo "<div class='col-md-1' id='estatistica-linha' style='background-color: #FF9800; font-weight: bold;'>";
+		echo "<div class='col-md-1' id='estatistica-linha' >";
 		 echo "Nota máxima"; echo "</div>";
 		 
 		echo "<div class='col-md-4'></div>";
@@ -165,16 +174,16 @@ $(document).ready(function(){
 	   echo "<div class='row' >";	   
 	   echo "<div class='col-md-4'></div>";
 	   
-		echo "<div class='col-md-1' id='estatistica-linha' style='background-color: #90caf9; font-weight: bold;'>";
+		echo "<div class='col-md-1' id='estatistica-linha-num' >";
 		echo $estatisticas->quantidadeDeProvas;  echo "</div>";
 		 
-		echo "<div class='col-md-1' id='estatistica-linha' style='background-color: #90caf9; font-weight: bold;'>"; 
+		echo "<div class='col-md-1' id='estatistica-linha-num' >"; 
 		echo number_format($estatisticas->minima, 1); echo "</div>";
 		
-		echo "<div class='col-md-1' id='estatistica-linha' style='background-color: #90caf9; font-weight: bold;'>";
+		echo "<div class='col-md-1' id='estatistica-linha-num' >";
 		 echo number_format($estatisticas->media, 1); echo "</div>";
 		 
-		echo "<div class='col-md-1' id='estatistica-linha' style='background-color: #90caf9; font-weight: bold;'>";
+		echo "<div class='col-md-1' id='estatistica-linha-num' >";
 		 echo number_format($estatisticas->maxima, 1); echo "</div>";
 		 
 		echo "<div class='col-md-4'></div>";
@@ -196,18 +205,20 @@ $(document).ready(function(){
    $resultado = mysql_query($sql) or die(mysql_error());	
 	
 		//Cabeçalho
-			echo "<div class='row' style='background-color: #FF9800; font-weight: bold;'>";
-				echo "<div class='col-md-12' id='topo'>"; echo "Provas no Sistema - ".date('d/m/Y'); echo "</div>";	
+			echo "<div class='row' >";
+				 echo "<div class='col-md-1'></div>";
+				echo "<div class='col-md-10' id='topo' style=''>"; echo "Provas no Sistema - ".date('d/m/Y'); echo "</div>";	
+				echo "<div class='col-md-1'></div>";
 			echo "</div>";
 			
-			echo "<div class='row' style='background-color: #FF9800; font-weight: bold;'>";
+			echo "<div class='row'>";
 				 echo "<div class='col-md-1'></div>";
-				 echo "<div class='col-md-2' style='border-left: 1px solid black'>"; echo "ID da Prova"; echo "</div>";
-				 echo "<div class='col-md-2'>"; echo "CPF";  echo "</div>";
-				 echo "<div class='col-md-2'>"; echo "Aluno"; echo "</div>";
-				 echo "<div class='col-md-2'>"; echo "Nota"; echo "</div>";
-				 echo "<div class='col-md-2'>"; echo "Ver prova"; echo "</div>";
-				 echo "<div class='col-md-1'></div>";
+				 echo "<div class='col-md-2' id='linha-topo' style='border-left: 1px solid black'>"; echo "ID da Prova"; echo "</div>";
+				 echo "<div class='col-md-2' id='linha-topo' >"; echo "CPF";  echo "</div>";
+				 echo "<div class='col-md-2' id='linha-topo' >"; echo "Aluno"; echo "</div>";
+				 echo "<div class='col-md-2' id='linha-topo' >"; echo "Nota"; echo "</div>";
+				 echo "<div class='col-md-2' id='linha-topo' >"; echo "Ver prova"; echo "</div>";
+				 echo "<div class='col-md-1' id='linha-topo' ></div>";
 			echo "</div>";	 
 			
 			//Contador para zebrar as linhas
@@ -232,28 +243,28 @@ $(document).ready(function(){
 				$corNota = '#388E3C';		
 						
 			//Imprimindo a linha
-			echo "<div class='row' id='cor$cor'>";
+			echo "<div class='row' >";
 		
 				 echo "<div class='col-md-1'></div>";
 				 
-				 echo "<div class='col-md-2' style='border-left: 1px solid black'>";
+				 echo "<div class='col-md-2' id='cor$cor' style='border-left: 1px solid black'>";
 				 echo $registro->idProvaAluno;
 				 echo "</div>";
 				 
-				 echo "<div class='col-md-2'>";
+				 echo "<div class='col-md-2' id='cor$cor'>";
 				 echo $registro->cpfAluno;	
 				 echo "</div>";	
 				 
-				 echo "<div class='col-md-2'>";
+				 echo "<div class='col-md-2' id='cor$cor'>";
 				 echo $registro->nomeAluno;	
 				 echo "</div>";	
 				 
 				 	
-				 echo "<div class='col-md-2' style='color: $corNota'>";
+				 echo "<div class='col-md-2' id='cor$cor' style='color: $corNota'>";
 				 echo "<strong style='font-size: 16px;'>".$registro->notaProvaAluno."</strong>";				 						 
 				 echo "</div>";	
 				 
-				 echo "<div class='col-md-2'>";
+				 echo "<div class='col-md-2' id='cor$cor'>";
 				 echo "<a href='resultadoIndividual.php?idProvaAluno=$registro->idProvaAluno'><span id='botao'>Visualizar</span></a>";
 				 echo "</div>";
 				 
@@ -269,7 +280,7 @@ $(document).ready(function(){
 			echo "<div class='row'>";
 			
 		   echo "<div class='col-md-12' align='center'>";
-		   echo "<form> <button style='margin-top: 25px;' class='mdl-button mdl-js-button mdl-button--raised
+		   echo "<form> <button id='home' style='margin-top: 25px;' class='mdl-button mdl-js-button mdl-button--raised
 		     		mdl-js-ripple-effect mdl-button--colored' formaction='javascript:history.back()'>
 					Voltar
 					</button> </form>	";

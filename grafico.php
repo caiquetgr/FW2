@@ -9,8 +9,8 @@
  	   $arrayPergNumero;
  	 
   	 
- 	   include "jpgraph.php";
-      include "jpgraph_bar.php";
+ 	   include "jpgraph/jpgraph.php";
+      include "jpgraph/jpgraph_bar.php";
  	 
  	 for($i=1; $i <= $qntdPerguntas; $i++ )
  	 	$arrayPergNumero[] = $i;
@@ -18,7 +18,7 @@
  	 	
  	 			//Construindo gráfico
  	 			
- 	 	$grafico = new graph(450,250,"png");
+ 	 	$grafico = new graph(560,250,"png");
 		$grafico->img->SetMargin(40,40,40,40);
 		$grafico->SetScale("textint");
 		

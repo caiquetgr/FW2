@@ -107,7 +107,7 @@
 					
 					?>
 					<div align='center'>
-		  		   <button style='margin-top: 25px;' class='mdl-button mdl-js-button mdl-button--raised
+		  		   <button id='botaoFuncProf' style='margin-top: 25px;' class='mdl-button mdl-js-button mdl-button--raised
 		     		mdl-js-ripple-effect mdl-button--colored' formaction='javascript:history.back()'>
 					Voltar
 					</button> 

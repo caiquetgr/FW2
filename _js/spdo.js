@@ -35,6 +35,23 @@ function cpfVazio(){
 
 }
 
+//Conferir campos da página registrarAluno.php
+function validaRegistraAluno(){
+	var nome = document.getElementById('nomeAluno');
+	var cpf = document.getElementById('cpfAluno');
+	
+	if(nome.value == ""){
+		alert("Preencha o nome do aluno!");
+		return false;
+	}
+	
+	if(cpf.value == ""){
+		alert("Preencha o cpf do aluno!");
+		return false;
+	}
+	
+	return true;
+}
 
 //Conferir os campos da página "CadastroProva.php"
 function validaCamposCadastro(){

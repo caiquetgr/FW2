@@ -221,12 +221,12 @@
 		
 			<div class='col-md-12' align='center'>
 			
-			<button style="margin-top: 20px;" class="mdl-button mdl-js-button mdl-button--raised
+			<button id='home' style="margin-top: 20px;" class="mdl-button mdl-js-button mdl-button--raised
 			 mdl-js-ripple-effect mdl-button--colored" formaction='javascript:history.back()'>
 					Voltar
 			</button>			
 			&nbsp;
-			<button style="margin-top: 20px;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+			<button id='home' style="margin-top: 20px;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
 					Atualizar
 			</button>		
 			</div>
